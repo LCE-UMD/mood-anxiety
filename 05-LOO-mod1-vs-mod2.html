@@ -1,0 +1,590 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. BML &#8212; Mood Anxiety</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Mood Anxiety</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Mood-Anxiety (MAX)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MSS vs. MVM
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-MSS_vs_MVM/00-visualization.html">
+   1. MSS vs. MVM
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/05-LOO-mod1-vs-mod2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(IRdisplay)
+
+display_html(
+&#39;&lt;script&gt;  
+code_show=true; 
+function code_toggle() {
+  if (code_show){
+    $(\&#39;div.input\&#39;).hide();
+  } else {
+    $(\&#39;div.input\&#39;).show();
+  }
+  code_show = !code_show
+}  
+$( document ).ready(code_toggle);
+&lt;/script&gt;
+  &lt;form action=&quot;javascript:code_toggle()&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Click here to toggle on/off the raw code.&quot;&gt;
+ &lt;/form&gt;&#39;
+)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><script>  
+code_show=true; 
+function code_toggle() {
+  if (code_show){
+    $('div.input').hide();
+  } else {
+    $('div.input').show();
+  }
+  code_show = !code_show
+}  
+$( document ).ready(code_toggle);
+</script>
+  <form action="javascript:code_toggle()">
+    <input type="submit" value="Click here to toggle on/off the raw code.">
+ </form></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">brms</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">parallel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>df &lt;- read.table(&#39;MAX_neutral_early_late.txt&#39;,header = TRUE,sep = &quot;,&quot;)
+df &lt;-filter(df,Phase==&#39;early&#39;)
+df$se = sqrt(df$var)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>iterations &lt;- 20000
+chains &lt;- 4
+SCALE &lt;- 1
+ns &lt;- iterations*chains/2
+
+dataTable &lt;- select(df,Subj,ROI,beta,se,TvsS,TRAIT,STATE)
+colnames(dataTable)[5] &lt;- &quot;cond&quot;
+qVars = &#39;cond,STATE,TRAIT&#39;
+EOI = &#39;Intercept,cond&#39;
+EOIq &lt;- strsplit(qVars, &#39;\\,&#39;)[[1]]
+if(!(&#39;Intercept&#39; %in% EOIq)) EOIq &lt;- c(&#39;Intercept&#39;, EOIq)
+EOIq &lt;- intersect(strsplit(EOI, &#39;\\,&#39;)[[1]], EOIq)
+print(paste0(&#39;Effect of interest: &#39;,EOIq))
+
+
+dataTable$Subj &lt;- factor(dataTable$Subj)
+dataTable$ROI &lt;- factor(dataTable$ROI)
+
+# number of ROIs
+nR &lt;- nlevels(dataTable$ROI)
+
+print(paste0(&#39;Number of subjects: &#39;,nlevels(dataTable$Subj)))
+print(paste0(&#39;Number of ROIs: &#39;,nlevels(dataTable$ROI)))
+print(paste0(&#39;Number of cores available: &#39;, detectCores(all.tests = FALSE, logical = TRUE)))
+
+# number of sigfigs to show on the table
+nfigs &lt;- 4
+
+head(dataTable)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1] &quot;Effect of interest: Intercept&quot; &quot;Effect of interest: cond&quot;     
+[1] &quot;Number of subjects: 109&quot;
+[1] &quot;Number of ROIs: 36&quot;
+[1] &quot;Number of cores available: 16&quot;
+</pre></div>
+</div>
+<div class="output text_html"><table>
+<caption>A data.frame: 6 × 7</caption>
+<thead>
+	<tr><th></th><th scope=col>Subj</th><th scope=col>ROI</th><th scope=col>beta</th><th scope=col>se</th><th scope=col>cond</th><th scope=col>TRAIT</th><th scope=col>STATE</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>MAX101</td><td>ACC                   </td><td>-0.008450</td><td>0.03363034</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>2</th><td>MAX101</td><td>Left AntDorsal Insula </td><td>-0.048800</td><td>0.02981610</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>3</th><td>MAX101</td><td>Left AntVentral Insula</td><td>-0.129348</td><td>0.04368066</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>4</th><td>MAX101</td><td>Left Anterior  Putamen</td><td>-0.014730</td><td>0.04275512</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>5</th><td>MAX101</td><td>Left Anterior Caudate </td><td>-0.072463</td><td>0.03974921</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>6</th><td>MAX101</td><td>Left Anterior MCC     </td><td> 0.049450</td><td>0.04815600</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set nuber of cores to use. </span>
+<span class="c1"># To run each chain on a single core, set number of core to 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getOption</span><span class="p">(</span><span class="s2">&quot;mc.cores&quot;</span><span class="p">))</span>
+<span class="n">options</span><span class="p">(</span><span class="n">mc</span><span class="o">.</span><span class="n">cores</span> <span class="o">=</span> <span class="n">parallel</span><span class="p">::</span><span class="n">detectCores</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getOption</span><span class="p">(</span><span class="s2">&quot;mc.cores&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>NULL
+[1] 16
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bml">
+<h1><strong>1. BML</strong><a class="headerlink" href="#bml" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="model-1">
+<h1>1.1 Model 1<a class="headerlink" href="#model-1" title="Permalink to this headline">¶</a></h1>
+<center> Y $\sim$ 1 + cond + state + trait + (1 + cond | SUB) + (1 + cond + state + trait | ROI) </center><div class="math notranslate nohighlight">
+\[Y_{s,r} \sim Student(\nu,\mu_{s,r},\sigma^{2}_{s,r})\]</div>
+<div class="math notranslate nohighlight">
+\[\mu_{s,r} = \alpha + \alpha_{SUB} + \alpha_{ROI} + (\beta_{cond} + \beta_{SUB_{cond}} + \beta_{ROI_{cond}})*cond + (\beta_{state} + \beta_{ROI_{state}})*state + (\beta_{trait} + \beta_{ROI_{trait}})*trait \]</div>
+<p>Where,<br />
+<span class="math notranslate nohighlight">\(\mu_{s,r}\)</span>: Mean ROI response in the given subject for a particular phase and block type.<br />
+<em>cond</em>: Threat (0.5) vs. Safe (-0.5)<br />
+<em>state</em>: Subject’s state score<br />
+<em>trait</em>: Subject’s trait score</p>
+</div>
+<div class="section" id="priors">
+<h1>Priors<a class="headerlink" href="#priors" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(\alpha \sim Student(3,0,10)\)</span> [population effect]<br />
+<span class="math notranslate nohighlight">\(\alpha_{SUB} \sim Student(\nu_{SUB},0,\sigma_{SUB})\)</span> [Subject effect]<br />
+<span class="math notranslate nohighlight">\(\alpha_{ROI} \sim Student(\nu_{ROI},0,\sigma_{ROI})\)</span> [ROI effect]</p>
+<p><span class="math notranslate nohighlight">\(\beta_{cond} \sim Student(3,0,10)\)</span> [population effect: cond]<br />
+<span class="math notranslate nohighlight">\(\beta_{state} \sim Student(3,0,10)\)</span> [population effect: state]<br />
+<span class="math notranslate nohighlight">\(\beta_{trait} \sim Student(3,0,10)\)</span> [population effect: trait]</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+  \alpha_{ROI} \\
+  \beta_{ROI_{cond}} \\
+  \beta_{ROI_{state}} \\
+  \beta_{ROI_{trait}}
+\end{bmatrix} \sim MVNormal(\begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix},S)\)</span></p>
+<p>$ S = \begin{bmatrix} \sigma_{\alpha_{ROI}} &amp; &amp; &amp; \ &amp; \sigma_{\beta_{ROI_{cond}}} &amp; &amp; \ &amp; &amp; \sigma_{\beta_{ROI_{state}}} &amp; \ &amp; &amp; &amp; \sigma_{\beta_{ROI_{trait}}} \end{bmatrix} R \begin{bmatrix} \sigma_{\alpha_{ROI}} &amp; &amp; &amp; \ &amp; \sigma_{\beta_{ROI_{cond}}} &amp; &amp; \ &amp; &amp; \sigma_{\beta_{ROI_{state}}} &amp; \ &amp; &amp; &amp; \sigma_{\beta_{ROI_{trait}}} \end{bmatrix}$</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+  \alpha_{SUB} \\
+  \beta_{SUB_{cond}}
+\end{bmatrix} \sim MVNormal(\begin{bmatrix} 0 \\ 0 \end{bmatrix},S)\)</span></p>
+<p>$ S = \begin{bmatrix} \sigma_{\alpha_{SUB}} &amp; \ &amp; \sigma_{\beta_{SUB_{cond}}} \end{bmatrix} R \begin{bmatrix} \sigma_{\alpha_{SUB}} &amp; \ &amp; \sigma_{\beta_{SUB_{cond}}} \end{bmatrix}$</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{SUB} \sim HalfStudent(3,0,10)\)</span> [prior stddev for Subject effect]<br />
+<span class="math notranslate nohighlight">\(\sigma_{ROI} \sim HalfStudent(3,0,10)\)</span> [prior stddev for ROI effect]<br />
+<span class="math notranslate nohighlight">\(\nu_{SUB} \sim \Gamma(3.325,0.1)\)</span> [Subject effect hyperprior]<br />
+<span class="math notranslate nohighlight">\(\nu_{ROI} \sim \Gamma(3.325,0.1)\)</span> [ROI effect hyperprior]</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{\alpha} \sim HalfStudent(3,0,10)\)</span> [prior stddev among intercepts]<br />
+<span class="math notranslate nohighlight">\(\sigma_{\beta} \sim HalfStudent(3,0,10)\)</span> [prior stddev among slopes]</p>
+<p><span class="math notranslate nohighlight">\(R \sim LKJcorr(2)\)</span> [prior of correlation matix]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mod = &#39;1 + cond + STATE + TRAIT&#39;
+modelForm = paste(&#39;beta | se(se) ~&#39;,
+                  mod,&#39;+ (1 + cond | gr(Subj, dist= &quot;student&quot;)) +   
+                         (&#39;,mod,&#39;| gr(ROI, dist=&quot;student&quot;))&#39;)
+priorRBA &lt;- get_prior(formula = modelForm,data=dataTable,family = &#39;student&#39;)
+priorRBA$prior[5] &lt;- &quot;lkj(2)&quot;
+priorRBA$prior[8:9] &lt;- &quot;gamma(3.325,0.1)&quot;
+priorRBA$prior[11] &lt;- &quot;gamma(3.325,0.1)&quot;
+print(priorRBA)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>                 prior     class      coef group resp dpar nlpar bound
+1                              b                                      
+2                              b      cond                            
+3                              b     STATE                            
+4                              b     TRAIT                            
+5               lkj(2)       cor                                      
+6                            cor             ROI                      
+7                            cor            Subj                      
+8     gamma(3.325,0.1)        df             ROI                      
+9     gamma(3.325,0.1)        df            Subj                      
+10 student_t(3, 0, 10) Intercept                                      
+11    gamma(3.325,0.1)        nu                                      
+12 student_t(3, 0, 10)        sd                                      
+13                            sd             ROI                      
+14                            sd      cond   ROI                      
+15                            sd Intercept   ROI                      
+16                            sd     STATE   ROI                      
+17                            sd     TRAIT   ROI                      
+18                            sd            Subj                      
+19                            sd      cond  Subj                      
+20                            sd Intercept  Subj                      
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mod1</span> <span class="o">&lt;-</span> <span class="n">brm</span><span class="p">(</span><span class="n">modelForm</span><span class="p">,</span>
+          <span class="n">data</span><span class="o">=</span><span class="n">dataTable</span><span class="p">,</span>
+          <span class="n">chains</span> <span class="o">=</span> <span class="n">chains</span><span class="p">,</span>
+          <span class="n">family</span> <span class="o">=</span> <span class="s1">&#39;student&#39;</span><span class="p">,</span>
+          <span class="n">prior</span> <span class="o">=</span> <span class="n">priorRBA</span><span class="p">,</span>
+          <span class="n">inits</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="n">iterations</span><span class="p">,</span> 
+          <span class="n">control</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">adapt_delta</span> <span class="o">=</span> <span class="mf">0.99</span><span class="p">,</span> <span class="n">max_treedepth</span> <span class="o">=</span> <span class="mi">15</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">Compiling the C++ model
+
+Start sampling
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="model-2">
+<h1>1.2 Model 2<a class="headerlink" href="#model-2" title="Permalink to this headline">¶</a></h1>
+<center> Y $\sim$ 1 + cond + state + trait + (1 | SUB) + (1 + cond + state + trait | ROI) </center><div class="math notranslate nohighlight">
+\[Y_{s,r} \sim Student(\nu,\mu_{s,r},\sigma^{2}_{s,r})\]</div>
+<div class="math notranslate nohighlight">
+\[\mu_{s,r} = \alpha + \alpha_{SUB} + \alpha_{ROI} + (\beta_{cond} + \beta_{SUB_{cond}} + \beta_{ROI_{cond}})*cond + (\beta_{state} + \beta_{ROI_{state}})*state + (\beta_{trait} + \beta_{ROI_{trait}})*trait \]</div>
+<p>Where,<br />
+<span class="math notranslate nohighlight">\(\mu_{s,r}\)</span>: Mean ROI response in the given subject for a particular phase and block type.<br />
+<em>cond</em>: Threat (0.5) vs. Safe (-0.5)<br />
+<em>state</em>: Subject’s state score<br />
+<em>trait</em>: Subject’s trait score</p>
+</div>
+<div class="section" id="id1">
+<h1>Priors<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(\alpha \sim Student(3,0,10)\)</span> [population effect]<br />
+<span class="math notranslate nohighlight">\(\alpha_{SUB} \sim Student(\nu_{SUB},0,\sigma_{SUB})\)</span> [Subject effect]<br />
+<span class="math notranslate nohighlight">\(\alpha_{ROI} \sim Student(\nu_{ROI},0,\sigma_{ROI})\)</span> [ROI effect]</p>
+<p><span class="math notranslate nohighlight">\(\beta_{cond} \sim Student(3,0,10)\)</span> [population effect: cond]<br />
+<span class="math notranslate nohighlight">\(\beta_{state} \sim Student(3,0,10)\)</span> [population effect: state]<br />
+<span class="math notranslate nohighlight">\(\beta_{trait} \sim Student(3,0,10)\)</span> [population effect: trait]</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+  \alpha_{ROI} \\
+  \beta_{ROI_{cond}} \\
+  \beta_{ROI_{state}} \\
+  \beta_{ROI_{trait}}
+\end{bmatrix} \sim MVNormal(\begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix},S)\)</span></p>
+<p>$ S = \begin{bmatrix} \sigma_{\alpha_{ROI}} &amp; &amp; &amp; \ &amp; \sigma_{\beta_{ROI_{cond}}} &amp; &amp; \ &amp; &amp; \sigma_{\beta_{ROI_{state}}} &amp; \ &amp; &amp; &amp; \sigma_{\beta_{ROI_{trait}}} \end{bmatrix} R \begin{bmatrix} \sigma_{\alpha_{ROI}} &amp; &amp; &amp; \ &amp; \sigma_{\beta_{ROI_{cond}}} &amp; &amp; \ &amp; &amp; \sigma_{\beta_{ROI_{state}}} &amp; \ &amp; &amp; &amp; \sigma_{\beta_{ROI_{trait}}} \end{bmatrix}$</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{SUB} \sim HalfStudent(3,0,10)\)</span> [prior stddev for Subject effect]<br />
+<span class="math notranslate nohighlight">\(\sigma_{ROI} \sim HalfStudent(3,0,10)\)</span> [prior stddev for ROI effect]<br />
+<span class="math notranslate nohighlight">\(\nu_{SUB} \sim \Gamma(3.325,0.1)\)</span> [Subject effect hyperprior]<br />
+<span class="math notranslate nohighlight">\(\nu_{ROI} \sim \Gamma(3.325,0.1)\)</span> [ROI effect hyperprior]</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{\alpha} \sim HalfStudent(3,0,10)\)</span> [prior stddev among intercepts]<br />
+<span class="math notranslate nohighlight">\(\sigma_{\beta} \sim HalfStudent(3,0,10)\)</span> [prior stddev among slopes]</p>
+<p><span class="math notranslate nohighlight">\(R \sim LKJcorr(2)\)</span> [prior of correlation matix]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mod = &#39;1 + cond + STATE + TRAIT&#39;
+modelForm = paste(&#39;beta | se(se) ~&#39;,
+                  mod,&#39;+ (1 | gr(Subj, dist= &quot;student&quot;)) +   
+                         (&#39;,mod,&#39;| gr(ROI, dist=&quot;student&quot;))&#39;)
+priorRBA &lt;- get_prior(formula = modelForm,data=dataTable,family = &#39;student&#39;)
+priorRBA$prior[5] &lt;- &quot;lkj(2)&quot;
+priorRBA$prior[7:8] &lt;- &quot;gamma(3.325,0.1)&quot;
+priorRBA$prior[10] &lt;- &quot;gamma(3.325,0.1)&quot;
+priorRBA
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A brmsprior: 18 × 8</caption>
+<thead>
+	<tr><th></th><th scope=col>prior</th><th scope=col>class</th><th scope=col>coef</th><th scope=col>group</th><th scope=col>resp</th><th scope=col>dpar</th><th scope=col>nlpar</th><th scope=col>bound</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>                   </td><td>b        </td><td>         </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>2</th><td>                   </td><td>b        </td><td>cond     </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>3</th><td>                   </td><td>b        </td><td>STATE    </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>4</th><td>                   </td><td>b        </td><td>TRAIT    </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>5</th><td>lkj(2)             </td><td>cor      </td><td>         </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>6</th><td>                   </td><td>cor      </td><td>         </td><td>ROI </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>7</th><td>gamma(3.325,0.1)   </td><td>df       </td><td>         </td><td>ROI </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>8</th><td>gamma(3.325,0.1)   </td><td>df       </td><td>         </td><td>Subj</td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>9</th><td>student_t(3, 0, 10)</td><td>Intercept</td><td>         </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>10</th><td>gamma(3.325,0.1)   </td><td>nu       </td><td>         </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>11</th><td>student_t(3, 0, 10)</td><td>sd       </td><td>         </td><td>    </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>12</th><td>                   </td><td>sd       </td><td>         </td><td>ROI </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>13</th><td>                   </td><td>sd       </td><td>cond     </td><td>ROI </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>14</th><td>                   </td><td>sd       </td><td>Intercept</td><td>ROI </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>15</th><td>                   </td><td>sd       </td><td>STATE    </td><td>ROI </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>16</th><td>                   </td><td>sd       </td><td>TRAIT    </td><td>ROI </td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>17</th><td>                   </td><td>sd       </td><td>         </td><td>Subj</td><td></td><td></td><td></td><td></td></tr>
+	<tr><th scope=row>18</th><td>                   </td><td>sd       </td><td>Intercept</td><td>Subj</td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mod2</span> <span class="o">&lt;-</span> <span class="n">brm</span><span class="p">(</span><span class="n">modelForm</span><span class="p">,</span>
+          <span class="n">data</span><span class="o">=</span><span class="n">dataTable</span><span class="p">,</span>
+          <span class="n">chains</span> <span class="o">=</span> <span class="n">chains</span><span class="p">,</span>
+          <span class="n">family</span> <span class="o">=</span> <span class="s1">&#39;student&#39;</span><span class="p">,</span>
+          <span class="n">prior</span> <span class="o">=</span> <span class="n">priorRBA</span><span class="p">,</span>
+          <span class="n">inits</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="n">iterations</span><span class="p">,</span> 
+          <span class="n">control</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">adapt_delta</span> <span class="o">=</span> <span class="mf">0.99</span><span class="p">,</span> <span class="n">max_treedepth</span> <span class="o">=</span> <span class="mi">15</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="leave-one-out-cross-validation-model-comparison">
+<h1>Leave one out cross-validation &amp; model comparison<a class="headerlink" href="#leave-one-out-cross-validation-model-comparison" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mod1</span> <span class="o">&lt;-</span> <span class="n">add_criterion</span><span class="p">(</span><span class="n">mod1</span><span class="p">,</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;loo&quot;</span><span class="p">,</span><span class="s2">&quot;waic&quot;</span><span class="p">,</span><span class="s2">&quot;bayes_R2&quot;</span><span class="p">))</span>
+<span class="n">mod2</span> <span class="o">&lt;-</span> <span class="n">qqadd_criterion</span><span class="p">(</span><span class="n">mod2</span><span class="p">,</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;loo&quot;</span><span class="p">,</span><span class="s2">&quot;waic&quot;</span><span class="p">,</span><span class="s2">&quot;bayes_R2&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">add_criterion</span><span class="p">(</span><span class="n">mod1</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;loo&quot;</span><span class="p">,</span> <span class="s2">&quot;waic&quot;</span><span class="p">,</span> <span class="s2">&quot;bayes_R2&quot;</span><span class="p">)):</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">function</span> <span class="s2">&quot;add_criterion&quot;</span>
+<span class="ne">Traceback</span>:
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare both models</span>
+<span class="n">comparison_table</span> <span class="o">&lt;-</span> <span class="n">loo_compare</span><span class="p">(</span><span class="n">mod1</span><span class="p">,</span><span class="n">mod2</span><span class="p">)</span>
+<span class="n">comparison_table</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="goodness-of-fit">
+<h1>Goodness of fit<a class="headerlink" href="#goodness-of-fit" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>R2_table &lt;- data.frame(sapply(list(mod1,mod2), function(x) round(median(x$criteria$bayes_R2)*100, 2)),row.names = c(&#39;mod1&#39;,&#39;mod2&#39;))
+names(R2_table) &lt;- &quot;Bayes R2&quot;
+R2_table
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chirag Limbachia<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

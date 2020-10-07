@@ -1,0 +1,15 @@
+.ipynb_checkpoints/
+00-initial-ROIs/*
+ROI_masks/*
+ROIs/.ipynb_checkpoints/
+05-LOO-mod1-vs-mod2.ipynb
+05-LOO-mod1-vs-mod2.r
+correlation_and_VIFs.ipynb
+references.bib
+01-final-ROIs/.Rhistory
+01-final-ROIs/data
+01-final-ROIs/results/*.RData
+03-MSS
+01-final-ROIs/.ipynb_checkpoints/*
+01-final-ROIs/results_offset/*.RData
+01-final-ROIs/.ipynb_checkpoints/04-rendering-checkpoint.ipynb

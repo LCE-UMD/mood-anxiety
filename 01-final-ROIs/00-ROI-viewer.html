@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ROI viewer &#8212; Mood Anxiety</title>
+    <title>1. ROI viewer &#8212; Mood Anxiety</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -40,6 +40,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Data Preprocessing" href="01-preproc.html" />
+    <link rel="prev" title="Mood-Anxiety (MAX)" href="../intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -79,6 +81,29 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Final ROIs
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. ROI viewer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-preproc.html">
+   2. Data Preprocessing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-results.html">
+   3. Results: Brain Slices
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -149,22 +174,22 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quick-glass-brain-look">
-   Quick glass brain look
+   1.1. Quick glass brain look
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#click-around-to-look-at-rois">
-   Click around to look at ROIs
+   1.2. Click around to look at ROIs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#roi-details">
-   ROI Details
+   1.3. ROI Details
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#code-for-assembly-of-max-rois-final-gm-nii-gz">
-     Code for assembly of MAX_ROIs_final_gm.nii.gz
+     1.3.1. Code for assembly of MAX_ROIs_final_gm.nii.gz
     </a>
    </li>
   </ul>
@@ -180,7 +205,7 @@
               <div>
                 
   <div class="section" id="roi-viewer">
-<h1>ROI viewer<a class="headerlink" href="#roi-viewer" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>ROI viewer<a class="headerlink" href="#roi-viewer" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -208,7 +233,7 @@
 </div>
 </div>
 <div class="section" id="quick-glass-brain-look">
-<h2>Quick glass brain look<a class="headerlink" href="#quick-glass-brain-look" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Quick glass brain look<a class="headerlink" href="#quick-glass-brain-look" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the ROI mask</span>
@@ -226,7 +251,7 @@
  55. 56. 57. 58.]
 </pre></div>
 </div>
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays.OrthoProjector at 0x7f47bd4cff28&gt;
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays.OrthoProjector at 0x7f819de87fd0&gt;
 </pre></div>
 </div>
 <img alt="../_images/00-ROI-viewer_4_21.png" src="../_images/00-ROI-viewer_4_21.png" />
@@ -234,7 +259,7 @@
 </div>
 </div>
 <div class="section" id="click-around-to-look-at-rois">
-<h2>Click around to look at ROIs<a class="headerlink" href="#click-around-to-look-at-rois" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Click around to look at ROIs<a class="headerlink" href="#click-around-to-look-at-rois" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">plotting</span><span class="o">.</span><span class="n">view_img</span><span class="p">(</span><span class="n">mask_path</span><span class="p">)</span>
@@ -288,7 +313,7 @@
 </div>
 </div>
 <div class="section" id="roi-details">
-<h2>ROI Details<a class="headerlink" href="#roi-details" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>ROI Details<a class="headerlink" href="#roi-details" title="Permalink to this headline">¶</a></h2>
 <p>Information about origins, locations &amp; indexing for a plethora of ROIs used in MAX analyses.</p>
 <p>For analyses, please use short-hand <code class="docutils literal notranslate"><span class="pre">README_ROIs.txt</span></code></p>
 <p><em>In progress</em>
@@ -779,7 +804,7 @@ View ROIs using 01-ROI-viewer notebook using Binder</p>
 </font>
 <hr class="docutils" />
 <div class="section" id="code-for-assembly-of-max-rois-final-gm-nii-gz">
-<h3>Code for assembly of MAX_ROIs_final_gm.nii.gz<a class="headerlink" href="#code-for-assembly-of-max-rois-final-gm-nii-gz" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.1. </span>Code for assembly of MAX_ROIs_final_gm.nii.gz<a class="headerlink" href="#code-for-assembly-of-max-rois-final-gm-nii-gz" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>3dcalc -a r-mOFC_2mm_MidlineCut_Amunts.nii.gz \
 -b l-mOFC_2mm_MidlineCut_Amunts.nii.gz \
 -c r-lOFC_p.6_2mm_Amunts.nii.gz \
@@ -897,6 +922,8 @@ View ROIs using 01-ROI-viewer notebook using Binder</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Mood-Anxiety (MAX)</a>
+    <a class='right-next' id="next-link" href="01-preproc.html" title="next page"><span class="section-number">2. </span>Data Preprocessing</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

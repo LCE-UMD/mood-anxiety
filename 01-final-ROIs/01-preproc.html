@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Preprocessing &#8212; Mood Anxiety</title>
+    <title>2. Data Preprocessing &#8212; Mood Anxiety</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -40,6 +40,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Results: Brain Slices" href="05-results.html" />
+    <link rel="prev" title="1. ROI viewer" href="00-ROI-viewer.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -79,6 +81,29 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Final ROIs
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-ROI-viewer.html">
+   1. ROI viewer
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Data Preprocessing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-results.html">
+   3. Results: Brain Slices
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -149,17 +174,17 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#estimated-response-plot-varying-y-axis-range">
-   Estimated Response plot (varying y-axis range)
+   2.1. Estimated Response plot (varying y-axis range)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stai-scores">
-   STAI scores
+   2.2. STAI scores
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aggregate-early-late-periods">
-   Aggregate Early/Late Periods
+   2.3. Aggregate Early/Late Periods
   </a>
  </li>
 </ul>
@@ -173,7 +198,7 @@
               <div>
                 
   <div class="section" id="data-preprocessing">
-<h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -411,7 +436,7 @@
 </div>
 </div>
 <div class="section" id="estimated-response-plot-varying-y-axis-range">
-<h2>Estimated Response plot (varying y-axis range)<a class="headerlink" href="#estimated-response-plot-varying-y-axis-range" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Estimated Response plot (varying y-axis range)<a class="headerlink" href="#estimated-response-plot-varying-y-axis-range" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -446,7 +471,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f27aca94390&gt;
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fbfb18f5400&gt;
 </pre></div>
 </div>
 <img alt="../_images/01-preproc_13_11.png" src="../_images/01-preproc_13_11.png" />
@@ -454,7 +479,7 @@
 </div>
 </div>
 <div class="section" id="stai-scores">
-<h2>STAI scores<a class="headerlink" href="#stai-scores" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>STAI scores<a class="headerlink" href="#stai-scores" title="Permalink to this headline">¶</a></h2>
 <p>In this section, STAI scores are standardized and added to the dataset</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -615,7 +640,7 @@
 </div>
 </div>
 <div class="section" id="aggregate-early-late-periods">
-<h2>Aggregate Early/Late Periods<a class="headerlink" href="#aggregate-early-late-periods" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Aggregate Early/Late Periods<a class="headerlink" href="#aggregate-early-late-periods" title="Permalink to this headline">¶</a></h2>
 <p>This notebook aggregates responses from early (2.5-8.75s) and late periods (10-16.25s)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -984,6 +1009,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="00-ROI-viewer.html" title="previous page"><span class="section-number">1. </span>ROI viewer</a>
+    <a class='right-next' id="next-link" href="05-results.html" title="next page"><span class="section-number">3. </span>Results: Brain Slices</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

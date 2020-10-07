@@ -5,7 +5,7 @@ In the MAX experiment participants were presented with two conditions: threat an
 ## Experiment Design
 ```{figure} paradigm.png
 ---
-scale: 25%
+scale: 100%
 align: center
 ---
 

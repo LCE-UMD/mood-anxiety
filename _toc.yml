@@ -6,7 +6,3 @@
   - file: 01-final-ROIs/00-ROI-viewer
   - file: 01-final-ROIs/01-preproc
   - file: 01-final-ROIs/05-results
-
-- chapter: MSS vs. MVM
-  sections:
-  - file: 02-MSS_vs_MVM/00-visualization

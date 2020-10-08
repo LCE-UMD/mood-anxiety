@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Mood Anxiety</title>
+    <title>Mood-Anxiety (MAX) &#8212; Mood Anxiety</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -38,8 +38,9 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. MSS vs. MVM" href="02-MSS_vs_MVM/00-visualization.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,6 +75,18 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <p class="caption">
  <span class="caption-text">
+  MSS vs. MVM
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-MSS_vs_MVM/00-visualization.html">
+   1. MSS vs. MVM
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Final ROIs
  </span>
 </p>
@@ -91,18 +104,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="01-final-ROIs/05-results.html">
    3. Results: Brain Slices
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MSS vs. MVM
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="02-MSS_vs_MVM/00-visualization.html">
-   1. MSS vs. MVM
   </a>
  </li>
 </ul>
@@ -139,6 +140,18 @@
             class="fas fa-download"></i></button>
 
     
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
 </div>
         <!-- Source interaction buttons -->
 
@@ -151,10 +164,12 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/LCE-UMD/mood-anxiety/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/LCE-UMD/mood-anxiety/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
+        <a class="edit-button" href="https://github.com/LCE-UMD/mood-anxiety/edit/master/intro.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -170,8 +185,20 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#experiment-design">
+   Experiment Design
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -180,13 +207,42 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="mood-anxiety-max">
+<h1>Mood-Anxiety (MAX)<a class="headerlink" href="#mood-anxiety-max" title="Permalink to this headline">¶</a></h1>
+<p>The fMRI session was phases, mood induction and main phase. During the mood induction phase, participants were presented simultaneously with like-category pictures and music segments for 4 minutes (<a class="reference internal" href="#exp-design"><span class="std std-numref">Fig. 1</span></a>).</p>
+<p>During fMRI experiment, participants were presented with two conditions: threat and safe. Each condition was presented as a block of length 16.25 seoncds. Brain regions of interest (ROI) were selected to analyze temporal evolution of the responses during both conditions. ROI analysis performed on each subject’s fMRI data. Evolution of the response for the two conditions was estimated by specifying a series of csplin regressors over a window of 20 seconds (from the onset of the condition until 20 seconds after). Estimation window was kept a little longer (20s) than the block length (16.25s) to observe the decay in the response.</p>
+<div class="section" id="experiment-design">
+<h2>Experiment Design<a class="headerlink" href="#experiment-design" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="exp-design">
+<a class="reference internal image-reference" href="_images/paradigm.png"><img alt="_images/paradigm.png" src="_images/paradigm.png" style="width: 920.0px; height: 443.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Experiment Design</span><a class="headerlink" href="#exp-design" title="Permalink to this image">¶</a></p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -196,6 +252,7 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='right-next' id="next-link" href="02-MSS_vs_MVM/00-visualization.html" title="next page"><span class="section-number">1. </span>MSS vs. MVM</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

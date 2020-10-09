@@ -3,7 +3,7 @@
 
 ```{figure} results/early_cond.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Threat vs. Safe (original).
@@ -11,7 +11,7 @@ Threat vs. Safe (original).
 
 ```{figure} results_offset/early_cond.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Threat vs. Safe (min-shifted).
@@ -21,7 +21,7 @@ Threat vs. Safe (min-shifted).
 
 ```{figure} results/late_cond.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Threat vs. Safe (original).
@@ -29,7 +29,7 @@ Threat vs. Safe (original).
 
 ```{figure} results_offset/late_cond.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Threat vs. Safe (min-shifted).
@@ -39,7 +39,7 @@ Threat vs. Safe (min-shifted).
 
 ```{figure} results/early_STATE.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. State Effect (original).
@@ -47,7 +47,7 @@ Avg. State Effect (original).
 
 ```{figure} results_offset/early_STATE.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. State Effect (min-shifted).
@@ -57,7 +57,7 @@ Avg. State Effect (min-shifted).
 
 ```{figure} results/late_STATE.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. State Effect (original).
@@ -65,7 +65,7 @@ Avg. State Effect (original).
 
 ```{figure} results_offset/late_STATE.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. State Effect (min-shifted).
@@ -75,7 +75,7 @@ Avg. State Effect (min-shifted).
 
 ```{figure} results/early_TRAIT.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. Trait Effect (original).
@@ -83,7 +83,7 @@ Avg. Trait Effect (original).
 
 ```{figure} results_offset/early_TRAIT.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. Trait Effect (min-shifted).
@@ -93,7 +93,7 @@ Avg. Trait Effect (min-shifted).
 
 ```{figure} results/late_TRAIT.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. Trait Effect (original).
@@ -101,7 +101,7 @@ Avg. Trait Effect (original).
 
 ```{figure} results_offset/late_TRAIT.png
 ---
-width: 6in
+width: 6.5in
 align: center
 ---
 Avg. Trait Effect (min-shifted).

@@ -89,8 +89,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05-results.html">
+  <a class="reference internal" href="05-posterior_bmaps.html">
    3. Results: Brain Slices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-posteriors.html">
+   4. Posteriors
   </a>
  </li>
 </ul>
@@ -265,97 +270,6 @@ $( document ).ready(code_toggle);
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Loading required package: Rcpp
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Loading 'brms' package (version 2.12.0). Useful instructions
-can be found by typing help('brms'). A more detailed introduction
-to the package is available through vignette('brms_overview').
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">
-Attaching package: ‘brms’
-
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">The following object is masked from ‘package:stats’:
-
-    ar
-
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">
-Attaching package: ‘dplyr’
-
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">
-Attaching package: ‘data.table’
-
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">The following objects are masked from ‘package:dplyr’:
-
-    between, first, last
-
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">── [1mAttaching packages[22m ─────────────────────────────────────── tidyverse 1.3.0 ──
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">[32m✔[39m [34mggplot2[39m 3.3.0     [32m✔[39m [34mpurrr  [39m 0.3.3
-[32m✔[39m [34mtibble [39m 3.0.0     [32m✔[39m [34mstringr[39m 1.4.0
-[32m✔[39m [34mtidyr  [39m 1.0.2     [32m✔[39m [34mforcats[39m 0.5.0
-[32m✔[39m [34mreadr  [39m 1.3.1     
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
-[31m✖[39m [34mdata.table[39m::[32mbetween()[39m masks [34mdplyr[39m::between()
-[31m✖[39m [34mdplyr[39m::[32mfilter()[39m       masks [34mstats[39m::filter()
-[31m✖[39m [34mdata.table[39m::[32mfirst()[39m   masks [34mdplyr[39m::first()
-[31m✖[39m [34mdplyr[39m::[32mlag()[39m          masks [34mstats[39m::lag()
-[31m✖[39m [34mdata.table[39m::[32mlast()[39m    masks [34mdplyr[39m::last()
-[31m✖[39m [34mpurrr[39m::[32mtranspose()[39m    masks [34mdata.table[39m::transpose()
-
-</pre>
-</div>
-</div>
 </div>
 <div class="section" id="model">
 <h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
@@ -401,8 +315,8 @@ Attaching package: ‘data.table’
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the BML output image</span>
-<span class="n">load</span><span class="p">(</span><span class="s1">&#39;results_offset/early.RData&#39;</span><span class="p">)</span>
-<span class="n">outDir</span> <span class="o">=</span> <span class="s1">&#39;results_offset/early_&#39;</span>
+<span class="n">load</span><span class="p">(</span><span class="s1">&#39;results/early.RData&#39;</span><span class="p">)</span>
+<span class="n">outDir</span> <span class="o">=</span> <span class="s1">&#39;results/early_&#39;</span>
 <span class="n">summary_file</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span><span class="s1">&#39;summary.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -426,12 +340,12 @@ Attaching package: ‘data.table’
 	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><th scope=row>1</th><td>MAX101</td><td>L ACC             </td><td>0.143191</td><td>0.03217142</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>2</th><td>MAX101</td><td>L BLBM Amygdala   </td><td>0.455408</td><td>0.09101648</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>3</th><td>MAX101</td><td>L BST             </td><td>0.657150</td><td>0.11633142</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>4</th><td>MAX101</td><td>L CeMe Amygdala   </td><td>0.388874</td><td>0.09688653</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>5</th><td>MAX101</td><td>L Crus II         </td><td>0.116351</td><td>0.02803569</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>6</th><td>MAX101</td><td>L Hippocampus body</td><td>0.267160</td><td>0.04748684</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>1</th><td>MAX101</td><td>L ACC             </td><td>-0.001354</td><td>0.03217142</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>2</th><td>MAX101</td><td>L BLBM Amygdala   </td><td> 0.234956</td><td>0.09102198</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>3</th><td>MAX101</td><td>L BST             </td><td>-0.097319</td><td>0.11632283</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>4</th><td>MAX101</td><td>L CeMe Amygdala   </td><td> 0.038481</td><td>0.09690201</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>5</th><td>MAX101</td><td>L Crus II         </td><td>-0.060787</td><td>0.02800000</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>6</th><td>MAX101</td><td>L Hippocampus body</td><td>-0.018110</td><td>0.04746578</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -449,9 +363,7 @@ print(EOIq)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1] &quot;Fixed effect model terms:&quot;
-</pre></div>
-</div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1] &quot;Intercept&quot; &quot;cond&quot;      &quot;STATE&quot;     &quot;TRAIT&quot;    
+[1] &quot;Intercept&quot; &quot;cond&quot;      &quot;STATE&quot;     &quot;TRAIT&quot;    
 </pre></div>
 </div>
 </div>
@@ -550,6 +462,13 @@ for (ii in 1:length(EOIq)){
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Function to create ridge plots 
 plotPDP &lt;- function(posteriors) {
+    
+    #if (title == &#39;cond&#39;){
+    #    title &lt;- &quot;Threat vs. Safe (2.5 - 8.75 seconds)&quot;
+    #} else {
+    #    title &lt;- paste(title,&quot;(2.5 - 8.75 seconds)&quot;)
+    #}
+    Title &lt;- &quot;Threat vs. Safe (2.5 - 8.75 seconds)&quot;
     rm(list=ls())
     ## import BML posterior table
     posteriors &lt;- as_tibble(posteriors)
@@ -628,65 +547,11 @@ plotPDP &lt;- function(posteriors) {
         axis.ticks.y = element_blank()) +
         labs(x = NULL,
              y = NULL,
-             title = &quot;Threat vs Safe (3 - 8 TR)&quot;,
+             #title = &quot;Threat vs. Safe (2.5 - 8.75 seconds)&quot;,
              fill = &quot;P+&quot;)
 #ggsave(&quot;posteriors.jpg&quot;, width=4.5, height=3, units = &quot;in&quot;, dpi = 900)
 }
 </pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># generates ridge plots for effects (Intercept, cond, TRAIT and STATE), and saves them.</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">ii</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">length</span><span class="p">(</span><span class="n">EOIq</span><span class="p">)){</span>
-    <span class="n">posteriors</span> <span class="o">&lt;-</span> <span class="n">psROI</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">EOIq</span><span class="p">[</span><span class="n">ii</span><span class="p">])</span>
-    <span class="n">plotPDP</span><span class="p">(</span><span class="n">posteriors</span><span class="p">)</span>
-    <span class="n">ggsave</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span><span class="n">EOIq</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span><span class="s1">&#39;.png&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mf">4.5</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">900</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="stderr docutils container">
-<pre class="stderr literal-block">No id variables; using all as measure variables
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Picking joint bandwidth of 0.00118
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">No id variables; using all as measure variables
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Picking joint bandwidth of 0.00212
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">No id variables; using all as measure variables
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Picking joint bandwidth of 0.00116
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">No id variables; using all as measure variables
-
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Picking joint bandwidth of 0.00127
-
-</pre>
 </div>
 </div>
 </div>
@@ -702,14 +567,44 @@ plotPDP &lt;- function(posteriors) {
 <div class="stderr docutils container">
 <pre class="stderr literal-block">No id variables; using all as measure variables
 
-</pre>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Picking joint bandwidth of 0.00212
+Picking joint bandwidth of 0.00219
 
 </pre>
 </div>
-<img alt="../_images/03a-MAX-early_results_15_2.png" src="../_images/03a-MAX-early_results_15_2.png" />
+<img alt="../_images/03a-MAX-early_results_14_1.png" src="../_images/03a-MAX-early_results_14_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># generates ridge plots for effects (Intercept, cond, TRAIT and STATE), and saves them.</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">ii</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">length</span><span class="p">(</span><span class="n">EOIq</span><span class="p">)){</span>
+    <span class="n">posteriors</span> <span class="o">&lt;-</span> <span class="n">psROI</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">EOIq</span><span class="p">[</span><span class="n">ii</span><span class="p">])</span>
+    <span class="n">plotPDP</span><span class="p">(</span><span class="n">posteriors</span><span class="p">)</span>
+    <span class="n">ggsave</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span><span class="n">EOIq</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span><span class="s1">&#39;.png&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">4.5</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">900</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">No id variables; using all as measure variables
+
+Picking joint bandwidth of 0.0013
+
+No id variables; using all as measure variables
+
+Picking joint bandwidth of 0.00219
+
+No id variables; using all as measure variables
+
+Picking joint bandwidth of 0.00136
+
+No id variables; using all as measure variables
+
+Picking joint bandwidth of 0.00136
+
+</pre>
+</div>
 </div>
 </div>
 <div class="cell docutils container">

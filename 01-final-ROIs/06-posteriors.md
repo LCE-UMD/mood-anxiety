@@ -1,4 +1,4 @@
-# Posteriors
+# Results: Posteriors
 ### Threat vs. Safe (2.5 to 8.75 seconds)
 
 ```{figure} results/early_cond.png

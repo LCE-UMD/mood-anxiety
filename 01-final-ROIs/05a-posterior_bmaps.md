@@ -1,4 +1,4 @@
-# Results: Brain Slices
+# Results: Brain Slices (Original)
 ### Threat vs. Safe
 
 ```{figure} results/cond_MAX_P+_slices.png

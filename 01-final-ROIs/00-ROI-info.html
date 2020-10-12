@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smooth spline estimate summary &#8212; Mood Anxiety</title>
+    <title>1. ROI Information &#8212; Mood Anxiety</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -40,6 +40,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Estimated Responses" href="01-preproc.html" />
+    <link rel="prev" title="Mood-Anxiety (MAX)" href="../intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -77,40 +79,35 @@
   Final ROIs
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-final-ROIs/00-ROI-info.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    1. ROI Information
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-final-ROIs/01-preproc.html">
-   2. Data Preprocessing
+  <a class="reference internal" href="01-preproc.html">
+   2. Estimated Responses
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-final-ROIs/01-preproc.html#estimated-responses">
-   3. Estimated Responses
+  <a class="reference internal" href="05a-posterior_bmaps.html">
+   3. Results: Brain Slices (Original)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-final-ROIs/05a-posterior_bmaps.html">
-   4. Results: Brain Slices (Original)
+  <a class="reference internal" href="05b-posteriors.html">
+   4. Results: Posteriors (Original)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-final-ROIs/05b-posteriors.html">
-   5. Results: Posteriors (Original)
+  <a class="reference internal" href="06a-posterior_bmaps.html">
+   5. Results: Brain Slices (Min. Shifted)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-final-ROIs/06a-posterior_bmaps.html">
-   6. Results: Brain Slices (Min. Shifted)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-final-ROIs/06b-posteriors.html">
-   7. Results: Posteriors (Min. Shifted)
+  <a class="reference internal" href="06b-posteriors.html">
+   6. Results: Posteriors (Min. Shifted)
   </a>
  </li>
 </ul>
@@ -163,7 +160,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/03-MSS/Untitled.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/01-final-ROIs/00-ROI-info.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -183,10 +180,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/LCE-UMD/mood-anxiety/issues/new?title=Issue%20on%20page%20%2F03-MSS/Untitled.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/LCE-UMD/mood-anxiety/issues/new?title=Issue%20on%20page%20%2F01-final-ROIs/00-ROI-info.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/LCE-UMD/mood-anxiety/edit/master/03-MSS/Untitled.ipynb"><button
+        <a class="edit-button" href="https://github.com/LCE-UMD/mood-anxiety/edit/master/01-final-ROIs/00-ROI-info.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -208,7 +205,31 @@
             <i class="fas fa-list"></i> On this page
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-glass-brain-look">
+   1.1. Quick glass brain look
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#click-around-to-look-at-rois">
+   1.2. Click around to look at ROIs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roi-details">
+   1.3. ROI Details
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-for-assembly-of-max-rois-final-gm-nii-gz">
+     1.3.1. Code for assembly of MAX_ROIs_final_gm.nii.gz
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -217,158 +238,65 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="section" id="roi-information">
+<h1><span class="section-number">1. </span>ROI Information<a class="headerlink" href="#roi-information" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
-
-<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
-<span class="s1">code_show=true; </span>
-<span class="s1">function code_toggle() {</span>
-<span class="s1"> if (code_show){</span>
-<span class="s1"> $(&#39;div.input&#39;).hide();</span>
-<span class="s1"> } else {</span>
-<span class="s1"> $(&#39;div.input&#39;).show();</span>
-<span class="s1"> }</span>
-<span class="s1"> code_show = !code_show</span>
-<span class="s1">} </span>
-<span class="s1">$( document ).ready(code_toggle);</span>
-<span class="s1">&lt;/script&gt;</span>
-<span class="s1">&lt;form action=&quot;javascript:code_toggle()&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Click here to toggle on/off the raw code.&quot;&gt;&lt;/form&gt;&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><script>
-code_show=true; 
-function code_toggle() {
- if (code_show){
- $('div.input').hide();
- } else {
- $('div.input').show();
- }
- code_show = !code_show
-} 
-$( document ).ready(code_toggle);
-</script>
-<form action="javascript:code_toggle()"><input type="submit" value="Click here to toggle on/off the raw code."></form></div></div>
-</div>
-<div class="section" id="smooth-spline-estimate-summary">
-<h1>Smooth spline estimate summary<a class="headerlink" href="#smooth-spline-estimate-summary" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Imports</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">nilearn</span> <span class="k">as</span> <span class="nn">nil</span>
 <span class="kn">from</span> <span class="nn">nilearn.plotting</span> <span class="kn">import</span> <span class="n">plot_glass_brain</span>
 <span class="kn">from</span> <span class="nn">nilearn</span> <span class="kn">import</span> <span class="n">plotting</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load text with ROI info as a dataframe</span>
-<span class="n">roi_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/data/bswift-1/Pessoa_Lab/MAX/ROI_masks/README_MAX_ROIs_final_gm.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">index_col</span> <span class="o">=</span> <span class="s1">&#39;Index&#39;</span><span class="p">)</span>
-<span class="n">roi_df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">roi_df</span><span class="p">[[</span><span class="s1">&#39;Hemi&#39;</span><span class="p">,</span><span class="s1">&#39;ROI&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">rois</span> <span class="o">=</span> <span class="n">roi_df</span><span class="o">.</span><span class="n">name</span>
-<span class="n">roi_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mask_path</span> <span class="o">=</span> <span class="s1">&#39;../ROI_masks/MAX_ROIs_final_gm.nii.gz&#39;</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">mask_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Hemi</th>
-      <th>ROI</th>
-      <th>Voxels</th>
-      <th>File_Name</th>
-      <th>name</th>
-    </tr>
-    <tr>
-      <th>Index</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>R</td>
-      <td>med. OFC</td>
-      <td>487</td>
-      <td>r-mOFC_2mm_MidlineCut_Amunts.nii.gz</td>
-      <td>R med. OFC</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>L</td>
-      <td>med. OFC</td>
-      <td>412</td>
-      <td>l-mOFC_2mm_MidlineCut_Amunts.nii.gz</td>
-      <td>L med. OFC</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>R</td>
-      <td>lat. OFC</td>
-      <td>57</td>
-      <td>r-lOFC_p.6_2mm_Amunts.nii.gz</td>
-      <td>R lat. OFC</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>L</td>
-      <td>lat. OFC</td>
-      <td>87</td>
-      <td>l-lOFC_p.6_2mm_Amunts.nii.gz</td>
-      <td>L lat. OFC</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>M</td>
-      <td>vmPFC1</td>
-      <td>67</td>
-      <td>vmPFC.nii.gz</td>
-      <td>M vmPFC1</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>MAX_ROIs_final_gm.nii.gz
+</pre></div>
 </div>
-<div class="cell docutils container">
+</div>
+</div>
+<div class="section" id="quick-glass-brain-look">
+<h2><span class="section-number">1.1. </span>Quick glass brain look<a class="headerlink" href="#quick-glass-brain-look" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define path to mask</span>
-<span class="n">mask_path</span> <span class="o">=</span> <span class="s1">&#39;../ROI_masks/MAX_ROIs_final_gm.nii.gz&#39;</span>
-<span class="n">mask</span> <span class="o">=</span> <span class="n">mask_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="c1"># Load the ROI mask</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the ROI mask</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">nil</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load_img</span><span class="p">(</span><span class="n">mask_path</span><span class="p">)</span>
-
-<span class="n">view</span> <span class="o">=</span> <span class="n">plotting</span><span class="o">.</span><span class="n">view_img</span><span class="p">(</span><span class="n">mask_path</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">rois</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span><span class="n">symmetric_cmap</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,)</span>
+<span class="n">roi_indx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">get_data</span><span class="p">())[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROIs indexes: &#39;</span><span class="p">,</span><span class="n">roi_indx</span><span class="p">)</span>
+<span class="n">plot_glass_brain</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>ROIs indexes:  [ 1.  2.  3.  4.  5.  6.  7.  8.  9. 10. 11. 12. 13. 14. 15. 16. 17. 18.
+ 19. 20. 21. 22. 23. 24. 25. 26. 27. 28. 29. 30. 31. 32. 33. 34. 35. 36.
+ 37. 38. 39. 40. 41. 42. 43. 44. 45. 46. 47. 48. 49. 50. 51. 52. 53. 54.
+ 55. 56. 57. 58.]
+</pre></div>
+</div>
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays.OrthoProjector at 0x7f00f238ed30&gt;
+</pre></div>
+</div>
+<img alt="../_images/00-ROI-info_4_2.png" src="../_images/00-ROI-info_4_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="click-around-to-look-at-rois">
+<h2><span class="section-number">1.2. </span>Click around to look at ROIs<a class="headerlink" href="#click-around-to-look-at-rois" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">plotting</span><span class="o">.</span><span class="n">view_img</span><span class="p">(</span><span class="n">mask_path</span><span class="p">)</span>
 <span class="c1"># In a Jupyter notebook, if ``view`` is the output of a cell, it will</span>
 <span class="c1"># be displayed below the cell</span>
 <span class="n">view</span>
@@ -391,7 +319,7 @@ $( document ).ready(code_toggle);
     &lt;!-- the colormap --&gt;
     &lt;img id=&quot;colorMap&quot; class=&quot;hidden&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAABCAYAAAAxWXB3AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/d3fzzAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAAUUlEQVR4nGP8/////x8MDAz48E8ay//7w8DA8BuKfyGxqcGnhZkYdvyno2XU5fMyfGZgZWCAYzYk9mDnM7LS2XJqm8nCxMDAwIEHs9NYnoMBAFEChf4wrnHMAAAAAElFTkSuQmCC&quot; alt=&quot;colormap&quot;&gt;
     &lt;!-- another sprite image, with an overlay--&gt;
-    &lt;img id=&quot;overlayImg&quot; class=&quot;hidden&quot; src=&quot;data:image/png;base64,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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjFXsfAOPFGOPexwAAAAA5erD3AQAAAABsRSMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4DI0QAAAA4DA0QgAAAIDD0AgBAAAADkMjBAAAADgMjRAAAADgMDRCAAAAgMPQCAEAAAAOQyMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4DI0QAAAA4DA0QgAAAIDD0AgBAAAADkMjBAAAADgMjRAAAADgMDRCAAAAgMPQCAEAAAAOQyMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4DI0QAAAA4DA0QgAAAIDD0AgBAAAADkMjBAAAADgMjRAAAADgMDRCAAAAgMPQCAEAAAAOQyMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4DI0QAAAA4DA0QgAAAIDD0AgBAAAADkMjBAAAADgMjRAAAADgMDRCAAAAgMPQCAEAAAAOQyMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4DI0QAAAA4DA0QgAAAIDD0AgBAAAADkMjBAAAADgMjRAAAADgMDRCAAAAgMPQCAEAAAAOQyMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4DI0QAAAA4DA0QgAAAIDD0AgBAAAADkMjBAAAADgMjRAAAADgMDRCAAAAgMPQCAEAAAAOQyMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4DI0QAAAA4DA0QgAAAIDD0AgBAAAADkMjBAAAADgMjRAAAADgMDRCAAAAgMPQCAEAAAAOQyMEAAAAOAyNEAAAAOAwNEIAAACAw9AIAQAAAA5DIwQAAAA4jP8PHD+IynC5i+oAAAAASUVORK5CYII=&quot; alt=&quot;overlay&quot;&gt;
+    &lt;img id=&quot;overlayImg&quot; class=&quot;hidden&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABEIAAAOOCAYAAAAET7c4AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/d3fzzAAAACXBIWXMAAA9hAAAPYQGoP6dpAAA+lUlEQVR4nO3dT4gt2X0n+F885I3Gg7CQMNgNVRINvTFUtTaNYGAwFAZvDILGGAyat9JIePNACEoLQ8IsVCAEb9NI06s3AoMxHgSzmUYUiIaGojejEQzDCIRUBVaBKSNhY2njRmcWmZEZGRn/b/w558bnA5fMl3nzZrz7zRP3/H5xIm4EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFeiOnoDAAAAYG1/HpHqz/9K7VuEvTLzxwAAADBCUV2WZl41ueVtz8yebfGgAAAA10QRXRZ5MUQjBAAAYETX0WqgTLpkAAAAXB2nM5VHZgAAAAAAAAAAAAAAADDIOTcAAECR0ncjVV9U0+QufffxhWZllrc6r2vOybvGAAAARUnfjdQurslTV06yy9dZsrnaDg8AAEx1hiOg16KrUKtza35PlnmYU1jL7Hhz94WlrsqyIgQAgFNrFmrtz608KENXTnLLz1jBLLMy1bmldyKld8rIUCMEAGBlCuiyyQ62MWVclVhUX6Op+8Dqi1FVX4yqmVUJuWmEAEAhFGZl6lphcOT28NSUZd1yy0eJy/DPrJ1XXTgP/UxpRfW1WPPUstxz0wgBgIIoxsrVd/oFMN+c6xfUKwtyL8yu0dgpS11NEY2u41zy3Fdvd/9sc/zlNAY1QgCgMFYY5K89mZRR/uasCslpMn82Tju7Dkvzy7GgvjZDK3bSG5HqW+fPtpohXTnlkp1GCAAUwlGysrgoYBmWFta5TObPZI0x0z7lQo7HmpNpOyvZ7avd/OhrivStDMmNRggAFKTrLSK7/s2xHLEuw5oZKarL4hoU+5h0PRCvZ0WoftSfY/rU02ZI7g0RjRAAKEyzGWKVyHVQiJVJbvtaur/LvSA7g7nZTTnFgn2MnQ4TERG/v+MGrcROAQCuSPrq7USl+pbX+KNNOapZfTEqmR1r7tHn+0bkXWFWvf34bSPrr623hXSZOr4e/YzMDjeW21DDpKsZIrdtDTY/2n5++6H6h+EmVi6ZZbERAMB0fStB6oK6SXF9rL5Jf7MB0vl9ue1qcjPkRz1f//TDp7lM8s9gUm4dmVXf0gg50lBuT5pXX43U3B82c5PZZVL67OMxUP306bxiTiOkfpyOU2iaTci5j7eVbDYEALhMX2GtqD6WZkgZlhbVNXkdYzS3gczqBtZYcfbv4vZ3/Fe106hmcd1VWD+5/11+ve9S0t5HzswsQm592o2QWl9DZOgaIZ2P38hu6v5xz9z8UQAAbKyrWBtqhCiqj3NJYT0lNwXaNvrGWMTlTeJmZhFyG9JVXE9piHQ+ltw219cMiVieW8TT7DRCAABObq2L3Jrkb2ewGdLTCFGc5WuNlVdym27OSoPBx1mhUazxOG7tZsilp+nulZk/BgDAZLFA7cIsQnZrazdEuq5fEDF/BY/xto9m03GNayg5RWa6J8X1f/tpRERUvzX9uVvruldym6azITIztzUzsyIEgOKYdADXotkM8XbV5WmvwGpffJNtpfTZVBfTtUuaIbLb1n0zpJVZxLTcSrpoe5YbBQAAuRi7oCPQL/1Lq5kxoxHC/tp5NV1TdlfzHwEAACBPdYF9TcX0teprhsgOAAAAuFrpXyI1b4++9+GEtxzPmI4OAAAA8ESzAWJFCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADPI+wAAAXJWUUqqqyjy3IDLbXkopNf/t+c5bO6+a3NbhSQQoVP0C6QWxDCag+2s+50ueb5ntq2/SHzHtue/6eZltZyivS8hsO5dkJpf9LclLTtN97OgN4DqYfJRHlzkfU7LYasLJPHIol+zKpiC4PnU+mvr5kkl+2nNDGS2XxROnICvDnEmI7I61dMIvt/2tUZzJbT9rFdMy28fazQ+5bWvNvGS1j6mZySMPU/KSVV5ktp3DV4Q4QnN9DEaYrqqqyn6wHPIqy9K8HHE7xpK8ZFMGqz7yMGWM2edxFln8kTsHtxxjO0/Z5cNksiyWfZfDEdCyOJpWHnONssirLPIqj7MntuHJYzbXAymHF7uyXHqhQPYjq7LIqyzyKo+5YVnkVR4LB9bnCYQTuPSdE9iPF7pyyKos8iqLvMpjrlEWeZXHKWYAACziGi9lkRcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKdVHb0B1+TPI1L9+V95bgEAACA7ivWVNJsgNc2Q/GleAQAAnMuzozfgGimoAQAAIE8aISv7q4iqa3UIAAAAwNX584ikEQIAAAB5cgoHAACnlb44fgCr+q45c46mZNckR6BmZwAAcIFmMabQ2t7f3a28/VcrzGOHCunqu1G1vy/fZdbMrDa3CdIkx2n+LiKtmVnTnAZk+mIkmbE2f1AAwKldOtmvJ/Qm6vtZq7Ce08TSFLnM2s2QSxohEfKbYosGVm1OfrKabsvMamMN5K1+79qK2VAAAKhtebR6iIbIcntlpshexxpFdUrvPDQbq7efPI6s1rV2ZhFPc5uaWe55Zb1xc6TvRqq+eD3/HwAA8qUhcoyU3kldBXXv/dtF24cR8XuP7yO7fkubV+1iutaX3WBx3chMVsPqRkjEsmZIX261Or/RZshdZjnnle2GzZW+e7csVTMEspE+Fan6B2MSgLzUk/05BXXn47x1Vwwo0jY1doR60mO81VG4NXJzHYp1zW2EPPrZusj+sOObmRfXOdiqedXVhHzUEFkhr5vWu6/ebNivuKo/ojVWhaR3IlVvX9fzUrL0xt1g+PnD1xTW+Uuf6u4Syy5vcoP51iqo2c/YUv3Zj9cssBVpq+sqzpbm1tkMiYjqXZmtaWxVQW0sx768IuZldhORbq6s7l3b1Mwiek5xGsgqYnpeNzs2Qp5t9cBHWKMJ0vzIcdIbke6bIO3vfSpSX8EWIb8jDeUWMZ4dxxgdU3LLVp1N1+3obTuP1zVBCpLSX6eI1+Phdrnq3ajuJ/kfPhwhvfRintRej7Uye5RVg6zW81BQvx5r5NX7e2S2mjlNkD59Y+v+d4w0Smo3OzasPrbXLzrCUEEWERE/7z/S2VVMWymyvc7Mft5xx+g+7aLdzJLZPrpW7gze3ykzRZJbWeS1j6r6s+UXpGs0rGS1vdsmyINLshv0oSJtLe3MIjZaffWht2hdQ1dedTOkHm9zi+7q3ag6i+iu0zCY7TaP13u++/7sx+vNK26bITmtvrqqFSG1saPSEXFfsD2ahDSK5q4C2kqDbY1m1vUzraOe7dxktr1Huf3+jJ9zxDoLc3OQW1msDllXSn+42XMpq/LlNMG/Bt1F9TrGjl6znap6u6pvk3+mJ6vfRH6rDMrzeu93unKaktulY+smoqpvlzzOmKtshMzV1wzpvK/Cen8jxXXXxLGZo8y2Vf2oNWY0Qw6xtEBbchR66vJG+qX0h2mNonpqfjK73JZNkEe/x35xNc1x1iyqN1sJ0nR3tNrKkHnqzLZsgvSywmCROq+hzNYYcxpX65mSWdOS5lXn7333kp9e31U2Qp4UZl1axdqcZgj5kd+69prws45L86r+Iar6ttY20a+Z11rNkMH83rz0N7B2ZrXO3N7UuFrD48y6Tq+4vDBLb0VqZ2WlwXJTxtbaTax2VlNXGHAMY2s9WzeEL13Fs4erbIRM0nEtg7HTLFhm6pHPSQ0sNvdw9Gz6ZL/6UVTN2+Rf9ub87eOxrQo0ro/iugBvPnwqr8tU1Q86X4u2mPz3ng//Xe8gM0dV/aC6ze1/7vjen1VbF265Ha0uxW1u/dlslZu8luvbP67+exrNkBzzKrIRsspkf+Ly/XYzRHNkntWKtJG8ho5ky2x/U1cW6Oxfrv1ittbqkN47vHnJoxOxfmaD3tzskU/laWb7LNvXDLnMQ2G9vXp1yP3t3YhnrkuwyOYNj8a4qi/e2CzScjpizWNd+8TfRCSZLdM31rZuPOaSV3HvGvNwtPqzt+8KUv20O8AfRTV68c3fj9F3uWheX0JBfakPRu9RrybozK5uhrQzezMixeOrEHvXmHWk9Idp8SSyL6+I++KsnRuZe/PoDbgeVfWDavMVPG9u+uinU+8Lb3P7XyOlv06rThTfXO2RaHl4t4qdGliaIBfbKrO6kG4W1O2iTHbLtDPbqpCu3o1KZus580qr4v5obicgjwvqvmZIxMR3Innr7uP/1n0kO70TSUG9XDuzobzuf2ZKbnWB/aaVBWt7KNBuc5uS2f3PTnkL5DcfPpXdOh4X1R/MyuzR47wRaah5VZPbOtbKLaJ1eueb3feR2zrq3NZYbZA+FWmoCSKz9VzU3G8/Vt/pMHeTfoVZftqZNQs0eeWrq+mhEZK/oVUfueSVxUbMVa8GaeubQI4V1V3XNEhfvVtR8K1pz9G/uwv7vxb6nG6tndmqzZA3HyaK6auRpmbGsCWZRYzkdpfX/WOa4K9qbqO493GaGbYyi5Db2pY0izsf541I8en+78ttXWMrUyc9Rk9mCrS83a8qeDeieuvpEU+Z5aeZWReZ5WnKKRSyy8tYZjnllc2GzNXXDIm4bFIS8dAEidAIWdOWmUXMb14xbuvM2EZXbpes6kk/evg8pxewazKn8Zh+1HiNeqNxSuAbkZpZNcltG1ObIX2ZlTRhPKv0o0jNzCLKONLJYzIrk9zK05dZjnllt0FzDBVpERccVVvQCGGarTKL0AjZypzMuiaMHKM3t//206h+K6pmYVaT3fGGGiJ1ZtUbD/nJrAzt8Sa3MvQ1sAAYVjdEcmyA1LLdsKmGJvsREdVvTf8/NhsgEQrqrYxlFrE8N5ltY0pmERHx/95+MGHMw5PcWmOs2bjSxMrHo9wG9ouaIflJ/9KaRzQyU1Tnrc5uzvwDgHJdzc6+b+JYm/LCphGyn6ECrWlObvLa3tg4i4iIj24/VL8nj1yk9Nk0lleEzHIyllmdlWZIXtqNkJriOm9ducmsDM3sZAbMcVU7jL4JSMT0naOLbe5rKLOIeDThJw+DmX30+J+yy0dvbjLLlszK1JmbhmP2nuQms+z1jTV55W+rBtZnI9JPr6y+zU36l0hrZ1Z/vnd2V/eHMrVIs5PMh8zKI7MyKazLI7PyTMlMXvnRwCpTXwNri7wU2esZOo3wEkNFdf09GS63RQOrmVmXOq8txt+zNR8sB5NXfnw44a1Z2YXMymP5aZnkVp7ezFpvuWr/mI8pmckrP525ySx7T3K7y2ztvDRByvXZiKQJso4j5pF1fltkd3WNkAiT/RJNneyTD5P9Mo1N9smP17TyVL8V1Vhu9o/5mZIb+WlntsVqEAX0uuqxtvaY+2lE1VxB0GyAyHAdR+wnt8ruKhshET0hNSb7ljjmxwSkPDIrk8zKMzTWqt+LymtanoYKNJnlq5lbnZO88tYuquV1bnXhrAFSvi3z84dBtu7PQ/MuJEV4dL6n86qL0R5nETLLnX0jAHAt2tcJ0bwCYDfpw0iW6gPA9UgpeV0vTLpz9HacgW4LAAAwqC7OqqpSPxSiWVDLrQztJojctuOJBQCKpkArjwKtLF1HqOWWt6FVBbLL05SVILJbjycSYGMm/GUx4S9P3+RRbvlSpJWl/TpmzOVvamb19/fZKsaM5Sar9az+RDoqUx4DrCwmH+UZ6/DLLi9Tz82VWz7mnE8ttzwYZ+WZUljLKy/m+OWR2X4+ttUDe4Erl45xmUxIyqWBnJf2BH/sSBr5qceSsVUOGZUlpZRkVh4rVMtjfr+dzVaETN4AQR5O06o8Xd1iE/58eRErj8zKY7VceYYyU2jnyQrH8sisPDLbxyZPoglkWUwey2MHWR6ZlUdm5ZFZWVwYsDzGWJnM9csjs+092+sXpZa9fi/j+gaUzPI1thOUF2zLRKQ8MsvPUCbVnT23h3Fjme25LVzmkrxS+mVK6Zfmmjszxta1SSNESOUZy0ymZZFXfkwey9OXi7zyJbPydGUjr7zJrDztfObm1W56VNXvyHtjl2bWpnH11KZ/xE6RKYu8yiOz8rgaeHlkVh4XBCyPzMrj2mTluSQzzZBjLLle0lDTQ24Pdm2E2FHmz0SkPDIrj8ljeWRWHhfbLI/MyiMzyFNXM0QTZGeuL1EeeZVHZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANmojt4A4Pr9TUSqP/9T+51i1LnJDODBq7t943P7xmK8ikjP5VWMV415Y4SxVoJXjTH2qpB9ZNYbB10UZ+X5m9YLWpMc89SXmbzy1c5MVrC+Vz0F2iuFdrZedbyePZdV1l71zEGeyy1brwbm+s8zzS3LjYIpNETKMdQIiZBhjmRWHg1H2N4rBVpxXo28nj2XXXZeyaw4rwrM7NnRGwBL/WlE9acR1d9EpPp29DbBWRhvZbGPhG29ikivjLEivZJbcV7JLHvPM2x8tGmEUDxHOstTN7GO3g4AmOP5yGvXKwVadp6bbxTnucyuwvOI6nnGWWqEUJyuFSCK6jJpiABQmucDr1tD3+M4z+UCm3pe4H5RI4SiaYaUyRL98hlv5ZEZbOu5MVak53IrznOZsQKNEOAwrlsAwDV4rjAr0nO5Zet5TzZ9XycvrwqY32uEUJz6dApHN8vRlZV3/cnbUC4yy5PMYD/PjSmAR5639ouvMr+ItJ04sBunMpWla7WO3PLXzk1mAE+PUD+3byzCq0Zuz2VWhFd3mT2XFwAAAAAAAAAAAAAAAGzBeTsAAAAc7puta7l8Tb3KRvxhAQDACAVaedqZRcgtd12ZRcgtZ6VmlvXGQdt/aA20v/A3nLV2Xk2yu9z3757fP1rxuRzKLEJul/h+47ldM7MI+8atbJkZ5Sl1sn9mMitPX2YRcstVqZk9O3oD4BL/ISKNFW5M9/2Vn8uhYkxu61k7tyHG3DLtjLbOrM5JXsvtnRnr+X5E2jOvoSKAPH0zIsmtPHIrT855aYRwFUz0y6RIW26rSf7UlQRyA3K0ZQNk6MimAi1PY0ej5VYmmeWl1HGW7VIVGGL5fnmmFM5ym2br5fpzmhwym6arONvzlKaavKZrZ+bUmDJsvX+cOpnPeTn42cisPHOKZrnlZUp2uWSWxUbAUq5BUZ6hzD6KiBu5Tfb9iLRVcaYZsr49rxEyRmbTuEYIbQq08sw9Ei23vJRUWPNgLLccMjt8A2ANXUXAR3cfb/ydZ6mvcNMMyYuVBmVYcqqSzGC+Jcu7c5jwn51mSPlKKKx5KucLqfqDmeCmI8Abz112hgrrCJnlSkOkDFMKbZkdb25DRGYwn2ZImTRDyjeU4c8j4qXMstWV3dGZ+WMZcTOy07zxHGanWQh81PH9G5llZ2hFT4TMcjC1EVK7kdkhlqwM0SyGZeYU1j+/+/jSODvc1Nxklq++orr2UmbZamZ3dGb+SGa4Gdhx3ngus3Qjs6JoYpVhbPVV043MDjOnKaKJBctNvYbBi8b9XhpnhxtbXdD2UmbZGGuE1F7KLEvfjEhdeUXsm5k/jhluJrzQ3ZzsOf0vjefkf8jw/34jsydyz6wu3rqK6tpNhtu9pZwzG2te1W4y2+6zmdO8qt3IDGbpK6z7JvwR5yvUfth4jv5tJv/3qUV17WUm272XHDOr9a0uaHuZ2XZvLefMai9GarSXO2x3lk9M7m6cLnMv5wKtdqMZcu+/dDwXpeZ2k+l2ry33zKY2QiLOk1lEfvvGJY2QiHNlRnlyney3C+uhAi3iPEXaDzv2Q7nmJrMH7dxyyqzpRQaFdU7q3HLNK+L4zJ5t+eBz/N2C85qPcpPxH9Tecpjgj7mJqG4K2M49lJBX7aagbT2zv4io/iKiGiuoOVadU/OdYmQG2/haRFXfxgpq8iGzsr00byzOy4jq5dkvltpsgvyrC7cppXd6GypV9fajx05ffPi91Xfn/96bk15/os6rzqo+8rm0yO7LrJ3XGm5OmllTe4XBJc2RZnZb5BUhs9xXhDTdWH11L7cVIX1uZEbBcl0R0vZiwjh7mfH2ryX3FSFNL2R2b+0VISl9vTF3/Mbqz+GLgexeXnFmP777f/+bxv/xhxHpkryaWTWtnduLgzLL5o+hXVzPNdQAibgt0u7v8z+9PfhYc5oiNz3B3WT03G7l7yLS+7FeId1n7QL7RmF9cYE2Zbwtedw+NzJbpaie0yhe6sYpTZup89tzfN19X2ZwoReW7UfENs2ruljbsziLkNlcfUV1xPUU1jn4cUT6dazbsOqzZm4vDsjsKv4QphTTEQ+Tx+ZKkHsfNj7/vcubITdX8txuZU5mKb2Tuib+dY5W8+xnam4R6xZrNwq1i8zdR17qZuKpjjdymySHBlbjfjKDhV5MHGcvjbNJ9iisX8jsYlMK6oj9iuoIeQ2Zmlet5GZI8X8EcwqziMeTxvTW8CCp3p32/NxohMyypJhuN0O6spuaV4RGyBJzx1rEfs2QG5n1Oqp51XRz4pVzl9i7gdV0I7OLdeW31RhjHV0FwBZL92svesbZS+Ns0BGFde2FzGY5U1F9DebmVduj8fhyg8w+tvYD7umSJkjEbeE81AxJb0WaUlzf3F6Ms5iLvR5p9uqduwZIc2VIX2ZT84qQ2VxLCrIljZO5bryQrapv9dWlbu5yuolINzIrwo3MLtK3/9tqjHG5vgIgpa+nrZohL+/G1ouI9NI4K8JLmU22pKjecrxFaIAMWdq06vq59PnHNVb1Xp7Pe5YbNcXTScbrdx/fH/y5JxdMHVkVEjF/ZchNwc/rluYeme67EOdaK3kiTPKnuGjVlUn/YZY2ouSVh0sb/RzniGtfcZm9z4VnuSNXGDDdkpy2utYL45auBIl4yO6+MfL57jptTjPkxU6NxoJXhLw+8PX3Jz9KXTT3rjJ4d/oW3SioR7ze8/X3n3xl8Jz4kZU8c9zIbDNDTZA6vzlNK/aheQUAwBRTV/Gkz0ea2gx5uVN99myPX7K2lP569B0rmrfm13t/pqcgq96K+I1TKDb2+uyfGCqg5bW213tu/ZqNrKGm1loNLZ663d+9HlMzIzevh8wA2l67u5Gz28K4zmpeZpesTmCpdlbnGGdFNkLmajdEeu/XUVzPWRHCJV7vzakvu7G8NES29vrgd+vceleFvHt7q3OS1/qq6s9az/3rk35uj+u7AADXq6q+3JqD9BfWU5of/xyR6tvFG8dE482Q9mqQvlUfv3rvNsOVNmwVRTZCnk7ut9EuqhVql5mSW/PiqFMbWPc/qwmyiar6s2rqmOtrfqT/8yGP30SkdoNRXvmoqrer+E9vP8qszf5wew9j7vWLH0te+3JqWXlck6AcD8X19R+tPqOq+kYV//s3Iv1tpPS3/a9bGiLrqqovV08bV0P3/0bV/Fjry+xX7z18nlNuRe/4u06RubRJ0lyq3y7WnhX+fOXsNsv3Z08g01tPi+qavLbzMPbev/9a851+Hv27UVBXfxxVX0Emr211ZdbrP719/2n1xw+5NLOT137GVuiM7Tfr3GS2v3Z2miT5ax+Z1iTJ19gqgtuLOH4hVdX3ZHiwlL5zl9UHg/erqm9UzWK6+ve3r1tdxfNve03b3G1uD5k194dd1wZJfxvpV/9+/HFzyS6LjciNQq0sXXnJ6jgpfeWuEfLtqv53/fmSsfWFxs98T66rqrO5LdYeT07GMovoz01my6X0w7vx82+7Tym7G19NdVa1JY0PmcGDlL7Q/a4HCurDpPSDVFV/2Pv892UW8ZBbs5jOpRCjbmj9f0++XlXfqzRAyjO04iO37Io8NWYrQ8uHFdb76prsd5m73PsLEam+LdsyxlTVt6t2YTZFV5btnOQ2XUo/THVR3echp+EjNHOMZfZHEemP5PjElLz6f/Yraeo+s4vMyuT1bJ6UfnDx85TSF9JQwc36UvpBmpLdUJNKZrl72gShLKWOMY2QCTRBjtE1uZ8y4ZfXMfryan6vL5vfRPR+r09dnCnQnhpbVfBwv/7xNDbWlubV/Pecn79m7QbIWG79j7O8GdJFZuWyf3xqaDXBXFtM+mX11Jzm1VgmKX0h/XZEVd8u3zr6TM1trLFYZ9b8muzyVWfZl1GO2WmE3LESJC/1qoKhlQVOiclHswBrNj/a9zPOtje1CTJVO5tnEZW81rNkFcjYiisZnZfmR7c1VoNsqc5Mdv3WbGSxLVmdy5TGcI5NkIiIjx29AUdoX8Mg4mGy76JyeZlyRHpOZs5938btdSaeNkPa92n+e0pu34uoXLtgvrWaIHVmc/aHMltmbmbtMXcJmZVJTtMtLcyq6ntVqUu+r4WimlyL6DMb2y/+dsT99V1yzi/bDYNae7K/5PoT7GOoMJNbnh4umDrevCIve2T2RxHp++YKRWmuKpDd5bom/C6amqcpF0wlLzIrWzO/EvMqboNhK5+9mzz+1LhYRdfKK/KlEVKmZm7ygm2UPtk/G82rMtW5yYq9+ENbSNEMx/hsxznUxuF6tmxg2W9uQ9MRtqdIK4/MaPrdxvzx781DsvO7HfP7rXPyR3CBroKsi0l/PqZm1iS/fPXlKbPjzRlr8spPOz8ZAXQXaxEK61z05TNEdsdZkldtjdxOebHUvTkKCsstaV5xHHmVaSw3jRFYz9DkX1GWj0uKNI7THEMyZIhGyEKOdpZHgQbb+2lEZawBPDVWlGmCwOU0P8rx9xHVkat4NEI2pglSNvmVQU7lkl15ZAacwdQiTQOrXLI7t9UaISmluwsSVVf/BzV2tLOkSeKZchtTSm51ZrUzZ1dKZhGPcztzZhFl5cYtmcHlhgprBVmZ5JaXKc0rmZWjmIulmuSXp11QR8iuBHIrT1dmEXIrwZle21wHBLbXLtIUZfk74t0suIx3iGGKTRohj37BlU8cS9aXWYTccjWUWU12+RnLTWZ50nQEALhOz7Z40OZEMTVs8btYV3Xn6O1gOWOtPDIrh6wAAMq3ycVSU0ppSTGd0i/vrlfxOwrxg8y9/kRKv0zy2k9VVdUlqwvqvIy1vGg+AgC5Sulnd/PGz5ivZK7OqiazfpufGnP/iyZM9Ovi7Pb+CrQ9XFpUP72/3LZ2ySlNMjvOJacPtnOT2X4uPe1T0xHgMUV1WRTWZWnnFSGzPqudGjNegM1bTtxVsJEP+Rxn6eoBmZVJbsfqGm9zmyAA3GoWaV0FG/lI6WepKyO55asvG5l12+QaIV2mTByr6ncqR832NZTLksxM/I8zllff2JLZPi4pqDnWJad6Uib5lcdEP38yKotVBOWR2TyrNkL6Jotzl+trhhxvahOk63O2pzAr09zc+jKT5f7q7DSvrltKv0yufVWWvqPW5MWRaiA3q18sdcrFHKc9zu0FHU1GttfOzES/DM3cZFYOWZXLKTHXTW7lcA58WTQ7yiS38shsns3fPvfSSb+JyT4UZ2Wa+nbHxtF10SDOl7FWnnoVyNHbwTQm+uUZalJpYMH6quozlbE1brNrhEwt0MiHovqcFNV5Ms6uhzGWt3Y+8sqbCT7AfJrIT+12sdQh9WkwzYm/IqBcssubST7AY/aLANNoRJZJbk9l0QhpskQ1f/WEUU4AXAvvXFeW5qTeBB/2Y2VB/lxEeprVL5a6VN9bsJqU5E0zpDwyK5t9YlnkBdvSBCmX7MokN65FditCIh6OyphAlklu+ZFJeWRWJrnBfhRk5ZAVkBs7JTiJrpUgirb8WSEHwLWol+trjJShfXqF3PLn7cUBBjg9BgAArpPrhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADX4VVEOnobAAAAgG08O3oDAAAAANjRK6tAAAAA4BSsCLnzSjMEAAAArp5GCAAAAHAaGiENr6wKAQAAgKumERIRzyOqo7cBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICr9M2IdPQ2AAAAANuqjt6AHLSbIF/zvAAAAMBVenb0BuTomxHJChEAAAC4PlY+3BlqfFghAgAAANdBgd+iIQIAAADXy6kxLV+LqDQ8AAAAYH9fikhf2vhSFQr+Ee0VIj+/+/jScwcAAACraTZA/uOGNbcVISO+FlH9PG4bID9vfP1FRHrhgqoAAABQFKsaZngx0Ph46bkEAACA7CneZ3oxsgrkpecUKEj6k/GVbdX/Yb92tCk51eR1rGZWsgCAPHmBXuCFZsi9H0ekf3Oi/2/pfnz3t7tlZn0Fm4Jgvh+39jVr5TanqK7Jb5q1M1uSVU1m81z6etbOyvMPAPnK5kW6xIL6RU9D5GVh/4+lmhP+PbJTYF9u68w6M/ro7uOnH39ZbtOsndloYf3RwPc+Lbcp1sxsbHVB+nyk+HR05/bp/p/jsTWaxHVWnm8AyF8WL9arThrT13sn+VX1jVX/vy9Ofs2QtY58Tsks/UmkJxP9RmFt4jnNGmOtnVd7XN0XbkMFdYQibYZLi7Q6s6F9YPr8xJUHmiGT7LH6qqk3P/vJYtQZVu/JCQC2ls2L7SpHYwYK6qYnhVt9RK3+/ozJ4osTrwq5tKiekldVfaNSoK3rkrHWl1lXgS23401pgHT+3Fh2mlibSunraWnjfqwhIrO83ednvwgAm7qKF9mpDZCmJwV2c2nx3edTj8q86GiGvLyS53bM0lOahgrqvhUHUwvrpbm9PElmS01pgrQLuMnNkHAUdAtdmc0psAfzU1hvoh5DS5tY948z0BCRWf6sDgHOJH28cRror+332MezozfgUoubIO2f++jp53OKuLPaaiVI1/2nTgjltr6xzFL6eqrv07xv9V5U9W30d8zI7cXIBYtZtm9sG8zuoxg//YlZ2k2QSwzllv4k0iUXYaXbGrk9eczPywqWSh+P1LwdvT10S689zkZu+UqvRXpyKzivohshSycd9WRz7eKMcVMK6qHvr1lUv7QCZJJLM6tNzY7LPWTy2t3t1pPTAhsNrCFDudlHrum1xsfXLr6uVe+Y08DaxJrXIXuUm7yyUfKE/0z68pFdfu6bIJ8euI/MstBuWN1rZVdSVsU2QuY2Qda+UGrTy4jqZaOofqnA7vQ0s+EibYiCeh+3mdU5tW+3mbVzG8tRUb2tlL6T2mPr6b9vdeXXx5jb1m1uO1JcZ6855uwbjzdUWB+xPVxGbuWRWaY65hOl7BuLbYQMFWddeq9vsOKqkJethghtfVn15zZkbIXB1FUhL+U2oD+bS5qLlxbVL+U1W1V9+eLnTDNkG80myBYNEbnlr2/SqBlyuZQ+t8rzVv06qvr25HcUMOE/k6GsmuRWHpkdo3c1SOE+dvQGrO+1iPhg1k/UEw2TjO2MTe7rorp94c3219je7aTxS7N+RkbHWpLZUtV78eSdnP45Iv225tQsD8XZ09zWaFo9eUy5XazOrKr+ryql76Q1c6oLtvTxSC4UuJ61miBt1a+jahdksltHc5yt8XhdWT36fXJbRUqfS0syqz642/fNKLRlVo7csyp4RUi/erl337LvuUXbr967nTCut4VMMXXZft/Rzl+9t/42ncUWhdiT3+Eo9WrWmjByvD3GXu2/+/xev+m61I39lL6TtljBkz4eqdm0sq+8XEqfWz0rK0O2tWYTy8qQbdVZXZJZ9cG0VTysZ05e1QdR1bfZvyfj8VVsI2TOZHGsMXJ/v47JhmJ6HXtO7iPkdokpRfVWeWo6LjeUyZbjz1hb5nacfan1tfVzGiqoZTdPe99YVV+uNhlbb9x+aK/g0RApwBtWF69pqxU9T7yxy2+5SrtlxKouaV49aYoMXOg2d8U2QiIeJiHNyUj9cY23sTNJXFffhHHtiWQzN0X1cnvlVTPe1rd1A9JYu0w7n7WPWNcFWfr84xUGEcbbUluuvuq8GOddbpogy+yd1/33NEM4ifYY0xgpz5kz88La0jeZdx513uRWrq7s5HaZuqBeuxGSPh+peU2ldjEtt+W2yKxrRUFzvMnrMmteJ+S+qO45Mq0RcpnmNXlWz6zWyk5myzULs7WaWZ2Nq0Zm8rrM2pkNnk7xhrwu9bT58X5U1S8WPaf313fpeTe6nE93ynbDjjB0RNOEMV9yK09XEd0kt7xMWU0gs3z0HY2uc5PVOpZeHLDzsT4eqa8J8qv3ZLaGtS/C+ahQ68hOoXaZx4Xa8iLt/vE0Qjb3kNn7EREXZZZei9RZWGuCrGatvB5d6LYjM42QQlhVUB5NkDLJrSzyKk/dDLFqpwxdzSuNq/Wl9Mm7ZshlRXXEcPNKobaeOrOIy3Pra17Jaz3NvCJWaIZEPBTXmiCra+cVMT+zznf8+SjvBkgt+w3ckyX65ZFZeWRWHpmVR2Z5Sv85UvU/Ps3BgZj9zGmGpP/cuNhwK7f0WqRfffD0Z2S2vqnNkKG8Ih4Ktjo3WW1janE9Na/7+yx4xxLGdeVVm9MUqfMqKadiNnRtKX0hVdX3eicjdo7lcM57WeRVrn+OSDKD5eqJf9ekn7w0i7Sa3I4zttKgObaMs+P1Ftf/9IuoPvGQUcRDZvI6zlAzJOJhvI01rwZ/x5cjVd/JK+OsNgYAoHTpH+8KsU+YZ+WuzqrWzuySiT/relSs/dMv7j+tM2sW05oheRjKrKt5Vf97z23kQWdDpJFbRET83w+fTs0qxyZIhEYIJ/G7d6sQ/t7ffDFkBg+axZriOm/twjpCZjnryivirlD7SaTqXztanZOUPpmeFGa1u2tJ1JlFKKpzILOy9DWvHmnkNvhYX77LNMMmSIQCY5HfjacvmnWxpnjLU1dmTfJaR/rHSGtN+IfGWdf9ZDiPwrocnYXaR+MTEI7Tl1lNdnnpa4bILE+9eUXILFMyK8+UzErPq+iNP8pYUd1HoXacOZn9fUSluJ5v7cJ6KLN247H9dcY9eYHbqLA2ltbRtXw//eTuSEvhE5Fr1LcqpM4sQm45mdIIiZBZTsZW8jz6mtyyILPyXHuTuNgNP9LSRkiEYuAomlf7WPO8+LnNq0t/39mMnRe/RF9m8lmHZkhZrAopi2ZIeaZmFiG3XAw1QyIivKbl55qbIUVu9NE0QsqjEVIepzOVq5mdnNbllKbytDMz0c/bUMMxQm65sfqqPGNN4giZ5eZaMytug3OxpLBWEBxnbl6yyoMVBsA18C4yZdFwLM+jQu0KCrRr13V6bpPM8nONmRW3wbmYcv0C8uOaEgDAHFbxlOG+ULuCJftnIbPyyAwAACBD7Ytvkj+ZAQAAAAAAAAAAl8nmfJ6Ufvb4Kt3VZ7LZNoal9LMkLwAAAErw7OgN6NNujJCnOid5AQAAUIJsGyERiusSNFeCyAsAAAAm6CqgU/pZUliXRV4AAADkLusVIeSrq+lRVZ+pNEMAAADImUYInIhGVZnkBgAA68m+EaIAyNPQ6g+Z5avOrZ2RzPLWzM0FigEA4DLZNEJM6svkWi7lahfW5K19YWJvWQ0AAMt87OgNaDK5L5diuhz1GGtmZtyVQU4AAHC5bCbVQ4W0yX+++i6aesS2AAAAwJhsTo2hTFX1marZ+NAEAQAAIGdZFa3t1QWKagAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICNfCkifSkiHb0dTCez8sgMAABYqjp6A65JuzD7j57f7MmsLF3ND5nlr5mbvAAAONqzozfgWjg6XR6ZAQAAnI9GCAAAAHAaliivyPLv8sisPDIDAAAAAAAAAAAAAAAAAADghJxfDyySvv34XXeqr9iflKTOT24AAJyNCTCHahbTCrJytJsgNRnmrSs3mZXBvhIAYD0mUxzKUekyda0GaWepcMtPXwOri8zyMdTAsg8FAJjv2dEbwLktmbyn16YXc+wvfTvSUFOEMsgsf82MmuOOPNSZtHORFQAc72NHb8DWphTN1QePi/H08bsi7teOsO1hbjOk+iCq+1y/2Pre/yKzo4wdoU7fjhQftn5GXrtqrtyhbHIsS/p2pK59opU8AHCMq30Bnrxq4KPbD+2mR/rLjqXIiras1A2r+Gr39+W1jSkXSU2vRWo2GO9/RiMkC1OL6OorUbX3hTI7xpzMtt4Wphs6jbD5tX23iiF9+TgNDeC6XOWpMUtOnbgvqmvf6rhPR3OEbaTXInXdmvepfh3V0Kqd9JeRZHaM9iqrPnU+stpe3zJ9yqD4ug7GX/7GxpoMAa7DVTZCJvvo8T+bzZDq11Fphuyvq+Ex9n1HqPdVfSWq2UXZO3e3Ds0xpSGSl7EJv6z2MaeBVd/PWMqDBlb5ND7KIi9gqqt9gZ57akxT1yqD5oRS4b2dObk1c0ofj9R3ikyEzLbWzO3JNXeambau6dJHXutbPDnsOJ3J6TL7WCMz2RzHuzSVbSw/mZXBtXiAPsWtCEnpcymlz+n2XqFL3g2m+nVUJvzHaOf25HSmtyPubx2rrNjHWhNBqwz2szSz5r6wffqZ/PLkKHZe5HE9XCQc6FNUI6TZABlrhlQfRDX1OgWjv9fE8WJbNK+apzKlj0d6cp0XdnE/zpoNj2h93vSt20JN42p/SwrrKTnZR5ZFXnnqalbJCgC2UVQj5LH3I6VPTruK/lBT5NOrbhQd6iZISp9MQ5ktaVy1GyBdRZuCeyfNa4C0GyD191rjTTb7m9oMaV4Lpm5cyWt/l67k6TqViX3Mya76ysP4qj82V/Nss4X0mZJd+nKk5m2P7WKZZp6yAmrFTWpvi+r3H32tqn4x7R0qhk696Hkb3YiHSYgiYJklmU06TeaPG4/3nadLwSNkdol202rKOOtdfnrXCOlqdrnexDHmnP/+ZOKoobW7yUu7f9TxNXkdajS7rswiHuUms2P0ZteXWTyej5CX9muZrODcitwB9K0qWFpcN4uz9PFI8UZE9V5UzR2mneVllmQ22gy5a4Q8aoLcZSavy100zuoVIe/0r/Rpj6/0l5GmTPb/IG5/7v8pdP+1h2Z2o2OssXqn7yho5xG0uyJNZvtaXFRHzMqM9VySmdey43XlV33l8Rzx0fdklj1zRSCi4Enp4CkWM1aIDJ2OYUe5rjUyG3z8BY0rBdqwLTNb2misM4uQW5+u3Jbmdelkv5lXhMzWsHVhLbP1Lc3M/CMPzfzGTrOQGUAZir1GyOBRzpFrUdw/xkoXU2WaNTKb9HtmTELqCX574s+tscyWPq5zdLfVlduaY4xjLX43GQXaYcYyWyObP4hI9e3Sx+Kxvvyq70RV3+p/77tlACz1saM34BL1ZL9zcv9Pv4j0j3crOj4x74VJkbadqvpF1VuM3WV2RF6OePYbGmdLxtgleZngT9c51haMseo7/UvAOU5dmHUu25dZlvrexvP+osQrFdFez7axRzMLgP1czU770YT/n37ReZ+xyb8ljvsay2xKsSazfd1ntjCviMszczrTfCl9MrUzm9twjLj8dCaZbaNdXLcLtvTlSE4/y0vfqRYAwD6u6sW3Pjrdp/pEVOknkap/fV3/75INZbZkZYgmyPbWzIz9tHOTFUP+ICJpggAA1+rqJjmDzZCPHv9TQyQPY4V1+knjyJnMstCXmeI6f0tPGQQAgGtR7MVS+1SfiKp3gv/pnTeGSYYKsrFVPhxjcJyRNdkBAHB2V9cIqU26vsRPFNm5UJiVSW4AAEBprr6IebKioHF6jNMs8tXMzbVdAAAAYKb0j5Hq4tpKEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgruroDWC+/z4iHb0NAAAAUKJnR28AAAAAwF40QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNPQCAEAAABOQyMEAAAAOA2NEAAAAOA0NEIAAACA09AIAQAAAE5DIwQAAAA4DY0QAAAA4DQ0QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNPQCAEAAABOQyMEAAAAOA2NEAAAAOA0NEIAAACA09AIAQAAAE5DIwQAAAA4DY0QAAAA4DQ0QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNPQCAEAAABOQyMEAAAAOA2NEAAAAOA0NEIAAACA09AIAQAAAE5DIwQAAAA4DY0QAAAA4DQ0QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNPQCAEAAABOQyMEAAAAOA2NEAAAAOA0NEIAAACA09AIAQAAAE5DIwQAAAA4DY0QAAAA4DQ0QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNPQCAEAAABOQyMEAAAAOA2NEAAAAOA0NEIAAACA09AIAQAAAE5DIwQAAAA4DY0QAAAA4DQ0QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNPQCAEAAABOQyMEAAAAOA2NEAAAAOA0NEIAAACA09AIAQAAAE5DIwQAAAA4DY0QAAAA4DQ0QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNPQCAEAAABOQyMEAAAAOA2NEAAAAOA0NEIAAACA09AIAQAAAE5DIwQAAAA4DY0QAAAA4DQ0QgAAAIDT0AgBAAAATkMjBAAAADgNjRAAAADgNDRCAAAAgNP4/wEkqhPlMQ8H+AAAAABJRU5ErkJggg==&quot; alt=&quot;overlay&quot;&gt;
     &lt;/canvas&gt;
   &lt;/div&gt;
 
@@ -409,7 +337,7 @@ $( document ).ready(code_toggle);
   $( window ).on(&#x27;load&#x27;,function() {
     // Create brain slices
     var brain = brainsprite(
-    {&quot;canvas&quot;: &quot;3Dviewer&quot;, &quot;sprite&quot;: &quot;spriteImg&quot;, &quot;nbSlice&quot;: {&quot;X&quot;: 91, &quot;Y&quot;: 109, &quot;Z&quot;: 91}, &quot;overlay&quot;: {&quot;sprite&quot;: &quot;overlayImg&quot;, &quot;nbSlice&quot;: {&quot;X&quot;: 91, &quot;Y&quot;: 109, &quot;Z&quot;: 91}, &quot;opacity&quot;: 1}, &quot;colorBackground&quot;: &quot;#000000&quot;, &quot;colorFont&quot;: &quot;#FFFFFF&quot;, &quot;crosshair&quot;: true, &quot;affine&quot;: [[2.0, 0.0, 0.0, -90.0], [0.0, 2.0, 0.0, -126.0], [0.0, 0.0, 2.0, -72.0], [0.0, 0.0, 0.0, 1.0]], &quot;flagCoordinates&quot;: true, &quot;title&quot;: null, &quot;flagValue&quot;: false, &quot;numSlice&quot;: {&quot;X&quot;: 44.28255966977987, &quot;Y&quot;: 53.078189586703076, &quot;Z&quot;: 33.373144106069304}, &quot;colorMap&quot;: {&quot;img&quot;: &quot;colorMap&quot;, &quot;min&quot;: 0, &quot;max&quot;: 58.0}}
+    {&quot;canvas&quot;: &quot;3Dviewer&quot;, &quot;sprite&quot;: &quot;spriteImg&quot;, &quot;nbSlice&quot;: {&quot;X&quot;: 91, &quot;Y&quot;: 109, &quot;Z&quot;: 91}, &quot;overlay&quot;: {&quot;sprite&quot;: &quot;overlayImg&quot;, &quot;nbSlice&quot;: {&quot;X&quot;: 91, &quot;Y&quot;: 109, &quot;Z&quot;: 91}, &quot;opacity&quot;: 1}, &quot;colorBackground&quot;: &quot;#000000&quot;, &quot;colorFont&quot;: &quot;#FFFFFF&quot;, &quot;crosshair&quot;: true, &quot;affine&quot;: [[2.0, 0.0, 0.0, -90.0], [0.0, 2.0, 0.0, -126.0], [0.0, 0.0, 2.0, -72.0], [0.0, 0.0, 0.0, 1.0]], &quot;flagCoordinates&quot;: true, &quot;title&quot;: null, &quot;flagValue&quot;: false, &quot;numSlice&quot;: {&quot;X&quot;: 44.28255966977987, &quot;Y&quot;: 53.078189586703076, &quot;Z&quot;: 33.373144106069304}, &quot;colorMap&quot;: {&quot;img&quot;: &quot;colorMap&quot;, &quot;min&quot;: -58.0, &quot;max&quot;: 58.0}}
     );
   });
   &lt;/script&gt;
@@ -417,35 +345,585 @@ $( document ).ready(code_toggle);
 &lt;/html&gt;
 " width="600" height="270.0" frameBorder="0"></iframe></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load MSS and MVM response</span>
-<span class="n">mss_threat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">nil</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load_img</span><span class="p">(</span><span class="s1">&#39;/data/bswift-1/Pessoa_Lab/MAX/dataset/positive_runs/Group/MSSt0.nii.gz&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_data</span><span class="p">())</span>
-<span class="n">mss_safe</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">nil</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load_img</span><span class="p">(</span><span class="s1">&#39;/data/bswift-1/Pessoa_Lab/MAX/dataset/positive_runs/Group/MSSs0.nii.gz&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_data</span><span class="p">())</span>
-</pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ncols</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">))</span>
-<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-<span class="n">markersize</span><span class="o">=</span><span class="mi">6</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
+<div class="section" id="roi-details">
+<h2><span class="section-number">1.3. </span>ROI Details<a class="headerlink" href="#roi-details" title="Permalink to this headline">¶</a></h2>
+<p>Information about origins, locations &amp; indexing for a plethora of ROIs used in MAX analyses.</p>
+<p>For analyses, please use short-hand <code class="docutils literal notranslate"><span class="pre">README_ROIs.txt</span></code></p>
+<p><em>In progress</em>
+View ROIs using 01-ROI-viewer notebook using Binder</p>
+<hr class="docutils" />
+<p><strong>Master file name:</strong> MAX_ROIs_final_gm.nii.gz
+<font size="2">
+<sub></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Hemi</p></th>
+<th class="head"><p>ROI</p></th>
+<th class="text-align:center head"><p>Index</p></th>
+<th class="text-align:center head"><p>Voxels</p></th>
+<th class="text-align:center head"><p>File Name</p></th>
+<th class="text-align:center head"><p>Transforms</p></th>
+<th class="text-align:right head"><p>Origin</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>med. OFC</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>487</p></td>
+<td class="text-align:center"><p>r-mOFC_2mm_MidlineCut_Amunts.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm, midline excluded, prob. mask threshold (0.6)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/26735709/">Henssen et al, 2016</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>med. OFC</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>412</p></td>
+<td class="text-align:center"><p>l-mOFC_2mm_MidlineCut_Amunts.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm, midline excluded, prob. mask threshold (0.6)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/26735709/">Henssen et al, 2016</a></p></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>lat. OFC</p></td>
+<td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>57</p></td>
+<td class="text-align:center"><p>r-lOFC_p.6_2mm_Amunts.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm, prob. mask threshold (0.6)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fnana.2020.00002/full">Wojtasik et al, 2020</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>lat. OFC</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>87</p></td>
+<td class="text-align:center"><p>l-lOFC_p.6_2mm_Amunts.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm, prob. mask threshold (0.6)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fnana.2020.00002/full">Wojtasik et al, 2020</a></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>vmPFC</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>67</p></td>
+<td class="text-align:center"><p>vmPFC.nii.gz</p></td>
+<td class="text-align:center"><p>EMOPROXI proximity map</p></td>
+<td class="text-align:right"><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>vmPFC</p></td>
+<td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>81</p></td>
+<td class="text-align:center"><p>Hartley_vmPFC_5mm.nii.gz</p></td>
+<td class="text-align:center"><p>5mm sphere based on coordinates from Hartley et al</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5426570/">Boeke et al, 2017</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>dlPFC</p></td>
+<td class="text-align:center"><p>7</p></td>
+<td class="text-align:center"><p>81</p></td>
+<td class="text-align:center"><p>l-dlPFC_Shackman_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>5mm sphere based on Shackmen et al dlPFC coordinates</p></td>
+<td class="text-align:right"><p>Shackman et al,</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>dlPFC</p></td>
+<td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>81</p></td>
+<td class="text-align:center"><p>r-dlPFC_Shackman_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>5mm sphere based on Shackmen et al dlPFC coordinates</p></td>
+<td class="text-align:right"><p>Shackman et al,</p></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>ACC</p></td>
+<td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>355</p></td>
+<td class="text-align:center"><p>r-ACC_BN_Atlas_2mm_clipped._midlineEX.nii.gz</p></td>
+<td class="text-align:center"><p>Clipped to avoid overlap with aMCC, midline excluded</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/27230218/">Fan et al, 2016</a> Brainnetome Atlas</p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>ACC</p></td>
+<td class="text-align:center"><p>10</p></td>
+<td class="text-align:center"><p>366</p></td>
+<td class="text-align:center"><p>l-ACC_BN_Atlas_2mm_clipped_midlineEX.nii.gz</p></td>
+<td class="text-align:center"><p>Clipped to avoid overlap with aMCC, midline excluded</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/27230218/">Fan et al, 2016</a> Brainnetome Atlas</p></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>ant. MCC</p></td>
+<td class="text-align:center"><p>11</p></td>
+<td class="text-align:center"><p>325</p></td>
+<td class="text-align:center"><p>cingulate_mid_anterior_DD_left_2mm_midlineExcluded.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm; midline clipped</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2937159/">Destrieux et al, 2010</a> (Mirtes sent)</p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>ant. MCC</p></td>
+<td class="text-align:center"><p>12</p></td>
+<td class="text-align:center"><p>393</p></td>
+<td class="text-align:center"><p>cingulate_mid_anterior_DD_left_2mm_midlineExcluded.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm; midline clipped</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2937159/">Destrieux et al, 2010</a> (Mirtes sent)</p></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>pre-SMA</p></td>
+<td class="text-align:center"><p>13</p></td>
+<td class="text-align:center"><p>268</p></td>
+<td class="text-align:center"><p>r-preSMA_JuBrain_2mm_p.5_midlineClipped.nii.gz</p></td>
+<td class="text-align:center"><p>prob. mask threshold (0.5), downsampled to 2mm, midline excluded</p></td>
+<td class="text-align:right"><p>Julich-Brain Atlas</p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>pre-SMA</p></td>
+<td class="text-align:center"><p>14</p></td>
+<td class="text-align:center"><p>276</p></td>
+<td class="text-align:center"><p>l-preSMA_JuBrain_2mm_p.5_midlineClipped.nii.gz</p></td>
+<td class="text-align:center"><p>prob. mask threshold (0.5), downsampled to 2mm, midline excluded</p></td>
+<td class="text-align:right"><p>Julich-Brain Atlas</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>PCC</p></td>
+<td class="text-align:center"><p>15</p></td>
+<td class="text-align:center"><p>64</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>EMOPROXI proximity map</p></td>
+<td class="text-align:right"><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>PCC/precuneus</p></td>
+<td class="text-align:center"><p>16</p></td>
+<td class="text-align:center"><p>60</p></td>
+<td class="text-align:center"><p>l-PCC2.nii.gz</p></td>
+<td class="text-align:center"><p>flipped original PCC2 cluster over the X axis</p></td>
+<td class="text-align:right"><p>Cluster from network analysis of EMOPROXI (in lab)</p></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>PCC/precuneus</p></td>
+<td class="text-align:center"><p>17</p></td>
+<td class="text-align:center"><p>60</p></td>
+<td class="text-align:center"><p>PCC2.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p>Cluster from network analysis of EMOPROXI (in lab)</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>PCC</p></td>
+<td class="text-align:center"><p>18</p></td>
+<td class="text-align:center"><p>52</p></td>
+<td class="text-align:center"><p>r-PCC_emoproxII_shockclust.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p>Shock cluster from EMOPROXII</p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>PCC</p></td>
+<td class="text-align:center"><p>19</p></td>
+<td class="text-align:center"><p>52</p></td>
+<td class="text-align:center"><p>l-PCC_emoproxII_shockclust.nii.gz</p></td>
+<td class="text-align:center"><p>Shock cluster reflected over X-axis</p></td>
+<td class="text-align:right"><p>Shock cluster from EMOPROXII</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>Ventral striatum</p></td>
+<td class="text-align:center"><p>20</p></td>
+<td class="text-align:center"><p>241</p></td>
+<td class="text-align:center"><p>r-VS-gm.nii.gz</p></td>
+<td class="text-align:center"><p>Multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>Ventral striatum</p></td>
+<td class="text-align:center"><p>21</p></td>
+<td class="text-align:center"><p>300</p></td>
+<td class="text-align:center"><p>l-VS-gm.nii.gz</p></td>
+<td class="text-align:center"><p>Multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>ant. Putamen</p></td>
+<td class="text-align:center"><p>22</p></td>
+<td class="text-align:center"><p>441</p></td>
+<td class="text-align:center"><p>r_anterior_putamen_gm_clipped3.nii.gz</p></td>
+<td class="text-align:center"><p>Voxels clipped 3 times to avoid overlap with INS masks; multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>ant. Putamen</p></td>
+<td class="text-align:center"><p>23</p></td>
+<td class="text-align:center"><p>392</p></td>
+<td class="text-align:center"><p>l_anterior_putamen_gm_clipped.nii.gz</p></td>
+<td class="text-align:center"><p>Voxels clipped to avoid overlap with INS mask; multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>post. Putamen</p></td>
+<td class="text-align:center"><p>24</p></td>
+<td class="text-align:center"><p>366</p></td>
+<td class="text-align:center"><p>r_posterior_putamen_gm_clipped3.nii.gz</p></td>
+<td class="text-align:center"><p>Voxels clipped 3 times to avoid overlap with INS masks; multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>post. Putamen</p></td>
+<td class="text-align:center"><p>25</p></td>
+<td class="text-align:center"><p>251</p></td>
+<td class="text-align:center"><p>l_posterior_putament_gm_clipped.nii.gz</p></td>
+<td class="text-align:center"><p>Voxels clipped to avoid overlap with INS mask; multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>ant. Caudate</p></td>
+<td class="text-align:center"><p>26</p></td>
+<td class="text-align:center"><p>489</p></td>
+<td class="text-align:center"><p>r_anterior_caudate_mask_gm.nii.gz</p></td>
+<td class="text-align:center"><p>Multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>ant. Caudate</p></td>
+<td class="text-align:center"><p>27</p></td>
+<td class="text-align:center"><p>364</p></td>
+<td class="text-align:center"><p>l_anterior_caudate_mask_gm.nii.gz</p></td>
+<td class="text-align:center"><p>Multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>post. Caudate</p></td>
+<td class="text-align:center"><p>28</p></td>
+<td class="text-align:center"><p>124</p></td>
+<td class="text-align:center"><p>r_poster_caudate_mask_gm.nii.gz</p></td>
+<td class="text-align:center"><p>Multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>post. Caudate</p></td>
+<td class="text-align:center"><p>29</p></td>
+<td class="text-align:center"><p>215</p></td>
+<td class="text-align:center"><p>l_poster_caudate_mask_gm.nii.gz</p></td>
+<td class="text-align:center"><p>Multipled with GM mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.pnas.org/content/113/7/1907">Wager et al, 2016</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>ant. ventral Insula</p></td>
+<td class="text-align:center"><p>30</p></td>
+<td class="text-align:center"><p>176</p></td>
+<td class="text-align:center"><p>Hammers-gm-0.5-anterior_pole_INS-r_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm; prob mask threshold (0.5)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811917300964">Hammers et al, 2017</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>ant. ventral Insula</p></td>
+<td class="text-align:center"><p>31</p></td>
+<td class="text-align:center"><p>171</p></td>
+<td class="text-align:center"><p>Hammers-gm-0.5-anterior_pole_INS-1_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm; prob mask threshold (0.5)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811917300964">Hammers et al, 2017</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>ant. dorsal Insula</p></td>
+<td class="text-align:center"><p>32</p></td>
+<td class="text-align:center"><p>235</p></td>
+<td class="text-align:center"><p>Hammers-gm-0.5-2mm-AntDorsal-INS-r.nii.gz</p></td>
+<td class="text-align:center"><p>Addition of ant./mid short gyrus &amp; ant. pole; Downsampled to 2mm; prob mask threshold (0.5)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811917300964">Hammers et al, 2017</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>ant. dorsal Insula</p></td>
+<td class="text-align:center"><p>33</p></td>
+<td class="text-align:center"><p>236</p></td>
+<td class="text-align:center"><p>Hammers-gm-0.5-2mm-AntDorsal-INS-l.nii.gz</p></td>
+<td class="text-align:center"><p>Addition of ant./mid short gyrus &amp; ant. pole; Downsampled to 2mm; prob mask threshold (0.5)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811917300964">Hammers et al, 2017</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>mid/post Insula</p></td>
+<td class="text-align:center"><p>34</p></td>
+<td class="text-align:center"><p>575</p></td>
+<td class="text-align:center"><p>Hammers-gm-0.5-2mm-MidPosterior-INS-r.nii.gz</p></td>
+<td class="text-align:center"><p>Addition of ant./post. long &amp; middle short gyrus; Downsampled to 2mm; prob mask threshold (0.5)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811917300964">Hammers et al, 2017</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>mid/post Insula</p></td>
+<td class="text-align:center"><p>35</p></td>
+<td class="text-align:center"><p>534</p></td>
+<td class="text-align:center"><p>Hammers-gm-0.5-2mm-MidPosterior-INS-l.nii.gz</p></td>
+<td class="text-align:center"><p>Addition of ant./post. long &amp; middle short gyrus; Downsampled to 2mm; prob mask threshold (0.5)</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811917300964">Hammers et al, 2017</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>BST</p></td>
+<td class="text-align:center"><p>36</p></td>
+<td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>rBNST.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5358094/">Theiss et al, 2017</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>BST</p></td>
+<td class="text-align:center"><p>37</p></td>
+<td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>lBNST.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5358094/">Theiss et al, 2017</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>CeMe Amygdala</p></td>
+<td class="text-align:center"><p>38</p></td>
+<td class="text-align:center"><p>47</p></td>
+<td class="text-align:center"><p>Amygdala_CeME_R.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p>Nacewicz et al, 2014</p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>CeMe Amygdala</p></td>
+<td class="text-align:center"><p>39</p></td>
+<td class="text-align:center"><p>35</p></td>
+<td class="text-align:center"><p>Amygdala_CeME_L.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p>Nacewicz et al, 2014</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>BLBM Amygdala</p></td>
+<td class="text-align:center"><p>40</p></td>
+<td class="text-align:center"><p>129</p></td>
+<td class="text-align:center"><p>Amygdala_BLBM_La_R.nii.gz</p></td>
+<td class="text-align:center"><p>Combined mask of basolateral and medial amygdala</p></td>
+<td class="text-align:right"><p>Nacewicz et al, 2014</p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>BLBM Amygdala</p></td>
+<td class="text-align:center"><p>41</p></td>
+<td class="text-align:center"><p>132</p></td>
+<td class="text-align:center"><p>Amygdala_BLBM_La_L.nii.gz</p></td>
+<td class="text-align:center"><p>Combined mask of basolateral and medial amygdala</p></td>
+<td class="text-align:right"><p>Nacewicz et al, 2014</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>ant. Hippocampus</p></td>
+<td class="text-align:center"><p>42</p></td>
+<td class="text-align:center"><p>341</p></td>
+<td class="text-align:center"><p>r-ant-hippocampus_Tian2020_2mm_clipped2.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm; clipped to avoid ant. caudate</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>ant. Hippocampus</p></td>
+<td class="text-align:center"><p>43</p></td>
+<td class="text-align:center"><p>331</p></td>
+<td class="text-align:center"><p>l-ant-hippocampus_Tian2020_2mm_clipped2.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm; clipped to avoid ant. caudate</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>Hippocampus body</p></td>
+<td class="text-align:center"><p>44</p></td>
+<td class="text-align:center"><p>198</p></td>
+<td class="text-align:center"><p>r-hippocampus-body_Tian2020_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>Hippocampus body</p></td>
+<td class="text-align:center"><p>45</p></td>
+<td class="text-align:center"><p>198</p></td>
+<td class="text-align:center"><p>l-hippocampus-body_Tian2020_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>Hippocampus tail</p></td>
+<td class="text-align:center"><p>46</p></td>
+<td class="text-align:center"><p>106</p></td>
+<td class="text-align:center"><p>r-hippocampus-tail_Tian2020_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>Hippocampus tail</p></td>
+<td class="text-align:center"><p>47</p></td>
+<td class="text-align:center"><p>106</p></td>
+<td class="text-align:center"><p>l-hippocampus-tail_Tian2020_2mm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>Hypothalamus</p></td>
+<td class="text-align:center"><p>48</p></td>
+<td class="text-align:center"><p>169</p></td>
+<td class="text-align:center"><p>Caltech_r-HTH-2mm_gm_clipped.nii.gz</p></td>
+<td class="text-align:center"><p>Multiplied with gray matter mask; downsampled to 2mm; clipped to avoid overlap with ant. thalamus</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.nature.com/articles/sdata201863">Pauli et al, 2018</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>Hypothalamus</p></td>
+<td class="text-align:center"><p>49</p></td>
+<td class="text-align:center"><p>148</p></td>
+<td class="text-align:center"><p>Caltech_l-HTH-2mm_gm_clipped.nii.gz</p></td>
+<td class="text-align:center"><p>Multiplied with gray matter mask; downsampled to 2mm; clipped to avoid overlap with ant. thalamus</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.nature.com/articles/sdata201863">Pauli et al, 2018</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>ant. Thalamus</p></td>
+<td class="text-align:center"><p>50</p></td>
+<td class="text-align:center"><p>867</p></td>
+<td class="text-align:center"><p>Tian_aTHA-lh.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>ant. Thalamus</p></td>
+<td class="text-align:center"><p>51</p></td>
+<td class="text-align:center"><p>867</p></td>
+<td class="text-align:center"><p>Tian_aTHA-rh.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>post. Thalamus</p></td>
+<td class="text-align:center"><p>52</p></td>
+<td class="text-align:center"><p>387</p></td>
+<td class="text-align:center"><p>Tian_pTHA-rh.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>post. Thalamus</p></td>
+<td class="text-align:center"><p>53</p></td>
+<td class="text-align:center"><p>387</p></td>
+<td class="text-align:center"><p>Tian_pTHA-lh.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.01.13.903542v1">Tian et al, 2020 - Melbourne Subcortical Atlas</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>PAG</p></td>
+<td class="text-align:center"><p>54</p></td>
+<td class="text-align:center"><p>15</p></td>
+<td class="text-align:center"><p>rPAG_Ezra.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4755135/">Ezra et al, 2015</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>PAG</p></td>
+<td class="text-align:center"><p>55</p></td>
+<td class="text-align:center"><p>24</p></td>
+<td class="text-align:center"><p>lPAG_Ezra.nii.gz</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4755135/">Ezra et al, 2015</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>Lobule IX</p></td>
+<td class="text-align:center"><p>56</p></td>
+<td class="text-align:center"><p>353</p></td>
+<td class="text-align:center"><p>Right_IX_SUIT_2mm_gm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm, multipled with CEREBELLUM gray matter mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/19457380/">Diedrichsen et al, 2009</a>, <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/20965257/">Deidrichsen et al, 2011</a></p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>Lobule IX</p></td>
+<td class="text-align:center"><p>57</p></td>
+<td class="text-align:center"><p>323</p></td>
+<td class="text-align:center"><p>Left_IX_SUIT_2mm_gm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm, multipled with CEREBELLUM gray matter mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/19457380/">Diedrichsen et al, 2009</a>, <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/20965257/">Deidrichsen et al, 2011</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>Crus II</p></td>
+<td class="text-align:center"><p>58</p></td>
+<td class="text-align:center"><p>1626</p></td>
+<td class="text-align:center"><p>Left_IX_SUIT_2mm_gm.nii.gz</p></td>
+<td class="text-align:center"><p>Downsampled to 2mm, multipled with CEREBELLUM gray matter mask</p></td>
+<td class="text-align:right"><p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/19457380/">Diedrichsen et al, 2009</a>, <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/20965257/">Deidrichsen et al, 2011</a></p></td>
+</tr>
+</tbody>
+</table>
+</sub>
+</font>
+<hr class="docutils" />
+<div class="section" id="code-for-assembly-of-max-rois-final-gm-nii-gz">
+<h3><span class="section-number">1.3.1. </span>Code for assembly of MAX_ROIs_final_gm.nii.gz<a class="headerlink" href="#code-for-assembly-of-max-rois-final-gm-nii-gz" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>3dcalc -a r-mOFC_2mm_MidlineCut_Amunts.nii.gz \
+-b l-mOFC_2mm_MidlineCut_Amunts.nii.gz \
+-c r-lOFC_p.6_2mm_Amunts.nii.gz \
+-d l-lOFC_p.6_2mm_Amunts.nii.gz \
+-e vmPFC.nii.gz \
+-f Hartley_vmPFC_5mm.nii.gz \
+-g r-dlPFC_Shackman_2mm.nii.gz \
+-h l-dlPFC_Shackman_2mm.nii.gz \
+-i r-ACC_BN_Atlas_2mm_clipped_midlineEX.nii.gz \
+-j l-ACC_BN_Atlas_2mm_clipped_midlineEX.nii.gz \
+-k cingulate_mid_anterior_DD_right_2mm_midlineExcluded.nii.gz \
+-l cingulate_mid_anterior_DD_left_2mm_midlineExcluded.nii.gz \
+-m r-preSMA_JuBrain_2mm_p.5_midlineClipped.nii.gz \
+-n l-preSMA_JuBrain_2mm_p.5_midlineClipped.nii.gz \
+-o PCC1.nii.gz \
+-p PCC2.nii.gz \
+-q l-PCC2.nii.gz \
+-r r-PCC_emoproxII_shockclust.nii.gz \
+-s l-PCC_emoproxII_shock_clust.nii.gz \
+-t r-VS-gm.nii.gz \
+-u l-VS-gm.nii.gz \
+-v r_anterior_putamen_gm_clipped3.nii.gz \
+-w l_anterior_putamen_gm_clipped.nii.gz \
+-x r_posterior_putamen_gm_clipped3.nii.gz \
+-y l_posterior_putamen_gm_clipped.nii.gz \
+-z r_anterior_caudate_mask_gm.nii.gz \
+-expr &#39;1*step(a)+2*step(b)+3*step(c)+4*step(d)+5*step(e)+6*step(f)+7*step(g)+8*step(h)+9*step(i)+10*step(j)+11*step(k)+12*step(l)+13*step(m)+14*step(n)+15*step(o)+16*step(p)+17*step(q)+18*step(r)+19*step(s)+20*step(t)+21*step(u)+22*step(v)+23*step(w)+24*step(x)+25*step(y)+26*step(z)&#39; \
+-prefix MAX_ROIs_A.nii.gz -overwrite
 
-<span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="n">roi</span> <span class="ow">in</span> <span class="n">rois</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mss_threat</span><span class="p">[</span><span class="n">mask</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span> <span class="o">==</span> <span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="n">markersize</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;MSS, threat&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mss_safe</span><span class="p">[</span><span class="n">mask</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span> <span class="o">==</span> <span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="n">markersize</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;MSS, safe&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">roi</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+3dcalc -a MAX_ROIs_A.nii.gz \
+-b l_anterior_caudate_mask_gm.nii.gz \
+-c r_poster_caudate_mask_gm.nii.gz \
+-d l_poster_caudate_mask_gm.nii.gz  \
+-e Hammers-gm-0.5-anterior_pole_INS-r_2mm.nii.gz \
+-expr &#39;a+27*step(b)+28*step(c)+29*step(d)+30*step(e)&#39; \
+-prefix MAX_ROIs_B.nii.gz -overwrite
+
+
+3dcalc -a MAX_ROIs_B.nii.gz \
+-b Hammers-gm-0.5-anterior_pole_INS-l_2mm.nii.gz \
+-c Hammers-gm-0.5-2mm-AntDorsal-INS-r.nii.gz \
+-d Hammers-gm-0.5-2mm-AntDorsal-INS-l.nii.gz \
+-e Hammers-gm-0.5-2mm-MidPosterior-INS-r.nii.gz \
+-f Hammers-gm-0.5-2mm-MidPosterior-INS-l.nii.gz \
+-expr &#39;a+31*step(b)+32*step(c)+33*step(d)+34*step(e)+35*step(f)&#39; \
+-prefix MAX_ROIs_B.nii.gz -overwrite
+
+
+3dcalc -a MAX_ROIs_B.nii.gz \
+-b rBNST.nii.gz \
+-c lBNST.nii.gz \
+-d Amygdala_CeME_R.nii.gz \
+-e Amygdala_CeME_L.nii.gz \
+-f Amygdala_BLBM_La_R.nii.gz \
+-g Amygdala_BLBM_La_L.nii.gz \
+-h r-ant-hippocampus_Tian2020_2mm_clipped2.nii.gz \
+-i l-ant-hippocampus_Tian2020_2mm_clipped2.nii.gz \
+-j r-hippocampus-body_Tian2020_2mm.nii.gz \
+-k l-hippocampus-body_Tian2020_2mm.nii.gz \
+-l r-hippocampus-tail_Tian2020_2mm.nii.gz \
+-m l-hippocampus-tail_Tian2020_2mm.nii.gz \
+-n Caltech_r-HTH-2mm_gm_clipped.nii.gz \
+-o Caltech_l-HTH-2mm_gm_clipped.nii.gz \
+-p Tian_aTHA-rh_clipped.nii.gz \
+-q Tian_aTHA-lh_clipped.nii.gz \
+-r Tian_pTHA-rh.nii.gz \
+-s Tian_pTHA-lh.nii.gz \
+-t rPAG_Ezra.nii.gz \
+-expr &#39;a + 36*step(b)+37*step(c)+38*step(d)+39*step(e)+40*step(f)+41*step(g)+42*step(h)+43*step(i)+44*step(j)+45*step(k)+46*step(l)+47*step(m)+48*step(n)+49*step(o)+50*step(p)+51*step(q)+52*step(r)+53*step(s)+54*step(t)&#39; \
+-prefix MAX_ROIs_B.nii.gz -overwrite
+
+3dcalc -a MAX_ROIs_B.nii.gz -b lPAG_Ezra.nii.gz \
+-c Right_IX_SUIT_2mm_gm.nii.gz \
+-d Left_IX_SUIT_2mm_gm.nii.gz \
+-e Left_CrusII_SUIT_2mm.nii.gz \
+-expr &#39;a + 55*step(b)+56*step(c)+57*step(d)+58*step(e)&#39; \
+-prefix MAX_ROIs_final.nii.gz -overwrite
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f202cd4f908&gt;
+<p>Multiply by gray matter mask</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>3dcalc -a /Users/kellymorrow/Box/Brain_templates/MNI152_T1_2mm_brain_GM_02182017.nii.gz \
+-b MAX_ROIs_final.nii.gz \
+-expr &#39;a*b&#39; -prefix MAX_ROIs_final_gm.nii.gz -overwrite
 </pre></div>
 </div>
-<img alt="../_images/Untitled_6_1.png" src="../_images/Untitled_6_1.png" />
 </div>
 </div>
 </div>
@@ -463,7 +941,7 @@ $( document ).ready(code_toggle);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./03-MSS"
+            path: "./01-final-ROIs"
         },
         predefinedOutput: true
     }
@@ -478,6 +956,8 @@ $( document ).ready(code_toggle);
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Mood-Anxiety (MAX)</a>
+    <a class='right-next' id="next-link" href="01-preproc.html" title="next page"><span class="section-number">2. </span>Estimated Responses</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

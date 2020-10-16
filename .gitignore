@@ -13,3 +13,5 @@ references.bib
 01-final-ROIs/.ipynb_checkpoints/*
 01-final-ROIs/results_offset/*.RData
 01-final-ROIs/.ipynb_checkpoints/04-rendering-checkpoint.ipynb
+05-functional-connectivity/data
+05-functional-connectivity/results/*RData

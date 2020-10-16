@@ -6,7 +6,7 @@
   - file: 01-final-ROIs/00-ROI-info
   - file: 01-final-ROIs/01-preproc
   - file: 01-final-ROIs_old/05a-posterior_bmaps
-  - file: 01-final-ROIs_old/05b-posterior
+  - file: 01-final-ROIs_old/05b-posteriors
   - file: 01-final-ROIs/06b-posteriors
 - part: Functional Connectivity
   sections:

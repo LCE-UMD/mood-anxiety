@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Functional Connectivity (FC) &#8212; Mood Anxiety</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. MSS vs. MVM" href="../02-MSS_vs_MVM/00-visualization.html" />
+    <link rel="prev" title="5. Results: Posteriors (Min. Shifted)" href="../01-final-ROIs/06b-posteriors.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Mood Anxiety</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Activation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs/00-ROI-info.html">
+   1. ROI Information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs/01-preproc.html">
+   2. Estimated Responses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs_old/05a-posterior_bmaps.html">
+   3. Results: Brain Slices (Original)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs_old/05b-posteriors.html">
+   4. Results: Posteriors (Original)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs/06b-posteriors.html">
+   5. Results: Posteriors (Min. Shifted)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Functional Connectivity
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Functional Connectivity (FC)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MSS vs. MVM
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-MSS_vs_MVM/00-visualization.html">
+   1. MSS vs. MVM
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/05-functional-connectivity/04-lBST-FC.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/LCE-UMD/mood-anxiety"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/LCE-UMD/mood-anxiety/issues/new?title=Issue%20on%20page%20%2F05-functional-connectivity/04-lBST-FC.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/LCE-UMD/mood-anxiety/edit/master/05-functional-connectivity/04-lBST-FC.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#left-bst">
+   1.1. Left BST
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intercept-mean-fc">
+   1.2. Intercept: Mean FC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fc-threat-vs-safe">
+   1.3. FC: Threat Vs. Safe
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="functional-connectivity-fc">
+<h1><span class="section-number">1. </span>Functional Connectivity (FC)<a class="headerlink" href="#functional-connectivity-fc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="left-bst">
+<h2><span class="section-number">1.1. </span>Left BST<a class="headerlink" href="#left-bst" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="intercept-mean-fc">
+<h2><span class="section-number">1.2. </span>Intercept: Mean FC<a class="headerlink" href="#intercept-mean-fc" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>                           P+  2-sided-p
+L ACC                  1.0000     0.0000
+L ant. Caudate         1.0000     0.0000
+L ant. dorsal Insula   1.0000     0.0000
+L ant. Hippocampus     1.0000     0.0000
+L ant. MCC             1.0000     0.0000
+L ant. Putamen         1.0000     0.0000
+L ant. Thalamus        1.0000     0.0000
+L ant. ventral Insula  1.0000     0.0000
+L BLBM Amygdala        1.0000     0.0000
+L CeMe Amygdala        1.0000     0.0000
+L Crus II              1.0000     0.0000
+L dlPFC                1.0000     0.0000
+L Hippocampus body     1.0000     0.0000
+L Hippocampus tail     1.0000     0.0000
+L Hypothalamus         0.7756     0.8768
+L lat. OFC             1.0000     0.0000
+L Lobule IX            1.0000     0.0000
+L med. OFC             1.0000     0.0000
+L mid/post Insula      1.0000     0.0000
+L PAG                  1.0000     0.0000
+L PCC                  1.0000     0.0000
+L PCC/precuneus        1.0000     0.0000
+L post. Caudate        1.0000     0.0000
+L post. Putamen        1.0000     0.0000
+L post. Thalamus       1.0000     0.0000
+L pre-SMA              1.0000     0.0000
+L Ventral striatum     1.0000     0.0000
+M PCC                  1.0000     0.0000
+M vmPFC1               1.0000     0.0000
+M vmPFC2               1.0000     0.0000
+R ACC                  1.0000     0.0000
+R ant. Caudate         1.0000     0.0000
+R ant. dorsal Insula   1.0000     0.0000
+R ant. Hippocampus     1.0000     0.0000
+R ant. MCC             1.0000     0.0000
+R ant. Putamen         1.0000     0.0000
+R ant. Thalamus        1.0000     0.0000
+R ant. ventral Insula  1.0000     0.0000
+R BLBM Amygdala        1.0000     0.0000
+R BST                  1.0000     0.0000
+R CeMe Amygdala        1.0000     0.0000
+R dlPFC                1.0000     0.0000
+R Hippocampus body     1.0000     0.0000
+R Hippocampus tail     1.0000     0.0000
+R Hypothalamus         0.8048     0.8457
+R lat. OFC             1.0000     0.0000
+R Lobule IX            1.0000     0.0000
+R med. OFC             1.0000     0.0000
+R mid/post Insula      1.0000     0.0000
+R PAG                  1.0000     0.0000
+R PCC                  1.0000     0.0000
+R PCC/precuneus        1.0000     0.0000
+R post. Caudate        1.0000     0.0000
+R post. Putamen        1.0000     0.0000
+R post. Thalamus       1.0000     0.0000
+R pre-SMA              1.0000     0.0000
+R Ventral striatum     1.0000     0.0000
+</pre></div>
+</div>
+<img alt="../_images/04-lBST-FC_5_1.png" src="../_images/04-lBST-FC_5_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="fc-threat-vs-safe">
+<h2><span class="section-number">1.3. </span>FC: Threat Vs. Safe<a class="headerlink" href="#fc-threat-vs-safe" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>                           P+  2-sided-p
+L ACC                  0.4564     0.9018
+L ant. Caudate         0.5276     0.9419
+L ant. dorsal Insula   0.3835     0.7502
+L ant. Hippocampus     0.2810     0.4897
+L ant. MCC             0.4522     0.4678
+L ant. Putamen         0.4456     0.3791
+L ant. Thalamus        0.5324     0.3762
+L ant. ventral Insula  0.4329     0.6583
+L BLBM Amygdala        0.2408     0.7078
+L CeMe Amygdala        0.2759     0.7370
+L Crus II              0.2994     0.6487
+L dlPFC                0.2562     0.7690
+L Hippocampus body     0.2771     0.2724
+L Hippocampus tail     0.3348     0.9230
+L Hypothalamus         0.1153     0.5039
+L lat. OFC             0.2098     0.5924
+L Lobule IX            0.2346     0.3693
+L med. OFC             0.1787     0.1070
+L mid/post Insula      0.4812     0.2394
+L PAG                  0.1736     0.2036
+L PCC                  0.2200     0.1961
+L PCC/precuneus        0.2450     0.2800
+L post. Caudate        0.3502     0.6191
+L post. Putamen        0.3996     0.8978
+L post. Thalamus       0.4862     0.5477
+L pre-SMA              0.3378     0.8027
+L Ventral striatum     0.4826     0.8210
+M PCC                  0.3202     0.6197
+M vmPFC1               0.3224     0.8305
+M vmPFC2               0.2258     0.3555
+R ACC                  0.4218     0.7581
+R ant. Caudate         0.5147     0.8226
+R ant. dorsal Insula   0.3306     0.7331
+R ant. Hippocampus     0.2050     0.0568
+R ant. MCC             0.4589     0.4103
+R ant. Putamen         0.4358     0.4210
+R ant. Thalamus        0.5092     0.5474
+R ant. ventral Insula  0.4244     0.9836
+R BLBM Amygdala        0.1968     0.7354
+R BST                  0.5282     0.6309
+R CeMe Amygdala        0.3034     0.7159
+R dlPFC                0.3394     0.3703
+R Hippocampus body     0.2842     0.2973
+R Hippocampus tail     0.3204     0.3666
+R Hypothalamus         0.1420     0.9554
+R lat. OFC             0.1806     0.0993
+R Lobule IX            0.2934     0.4206
+R med. OFC             0.2440     0.4898
+R mid/post Insula      0.4210     0.4029
+R PAG                  0.1342     0.0418
+R PCC                  0.2415     0.2789
+R PCC/precuneus        0.2284     0.3164
+R post. Caudate        0.3460     0.7828
+R post. Putamen        0.3810     0.9310
+R post. Thalamus       0.4760     0.4780
+R pre-SMA              0.3779     0.6316
+R Ventral striatum     0.3527     0.2598
+</pre></div>
+</div>
+<img alt="../_images/04-lBST-FC_7_1.png" src="../_images/04-lBST-FC_7_1.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./05-functional-connectivity"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../01-final-ROIs/06b-posteriors.html" title="previous page"><span class="section-number">5. </span>Results: Posteriors (Min. Shifted)</a>
+    <a class='right-next' id="next-link" href="../02-MSS_vs_MVM/00-visualization.html" title="next page"><span class="section-number">1. </span>MSS vs. MVM</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chirag Limbachia<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

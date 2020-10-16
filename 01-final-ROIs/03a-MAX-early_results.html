@@ -74,7 +74,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <p class="caption">
  <span class="caption-text">
-  Final ROIs
+  Activation
  </span>
 </p>
 <ul class="nav sidenav_l1">
@@ -85,32 +85,34 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01-preproc.html">
-   2. Data Preprocessing
+   2. Estimated Responses
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01-preproc.html#estimated-responses">
-   3. Estimated Responses
+  <a class="reference internal" href="../01-final-ROIs_old/05a-posterior_bmaps.html">
+   3. Results: Brain Slices (Original)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05a-posterior_bmaps.html">
-   4. Results: Brain Slices (Original)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05b-posteriors.html">
-   5. Results: Posteriors (Original)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06a-posterior_bmaps.html">
-   6. Results: Brain Slices (Min. Shifted)
+  <a class="reference internal" href="../01-final-ROIs_old/05b-posteriors.html">
+   4. Results: Posteriors (Original)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="06b-posteriors.html">
-   7. Results: Posteriors (Min. Shifted)
+   5. Results: Posteriors (Min. Shifted)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Functional Connectivity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-functional-connectivity/04-lBST-FC.html">
+   1. Functional Connectivity (FC)
   </a>
  </li>
 </ul>
@@ -330,8 +332,8 @@ $( document ).ready(code_toggle);
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the BML output image</span>
-<span class="n">load</span><span class="p">(</span><span class="s1">&#39;results/early.RData&#39;</span><span class="p">)</span>
-<span class="n">outDir</span> <span class="o">=</span> <span class="s1">&#39;results/early_&#39;</span>
+<span class="n">load</span><span class="p">(</span><span class="s1">&#39;results_offset/early.RData&#39;</span><span class="p">)</span>
+<span class="n">outDir</span> <span class="o">=</span> <span class="s1">&#39;results_offset/early_&#39;</span>
 <span class="n">summary_file</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span><span class="s1">&#39;summary.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -349,18 +351,18 @@ $( document ).ready(code_toggle);
 </pre></div>
 </div>
 <div class="output text_html"><table>
-<caption>A data.frame: 6 × 7</caption>
+<caption>A data.frame: 6 × 6</caption>
 <thead>
-	<tr><th></th><th scope=col>Subj</th><th scope=col>ROI</th><th scope=col>beta</th><th scope=col>se</th><th scope=col>cond</th><th scope=col>TRAIT</th><th scope=col>STATE</th></tr>
-	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+	<tr><th></th><th scope=col>Subj</th><th scope=col>ROI</th><th scope=col>beta</th><th scope=col>cond</th><th scope=col>TRAIT</th><th scope=col>STATE</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><th scope=row>1</th><td>MAX101</td><td>L ACC             </td><td>-0.001354</td><td>0.03217142</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>2</th><td>MAX101</td><td>L BLBM Amygdala   </td><td> 0.234956</td><td>0.09102198</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>3</th><td>MAX101</td><td>L BST             </td><td>-0.097319</td><td>0.11632283</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>4</th><td>MAX101</td><td>L CeMe Amygdala   </td><td> 0.038481</td><td>0.09690201</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>5</th><td>MAX101</td><td>L Crus II         </td><td>-0.060787</td><td>0.02800000</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
-	<tr><th scope=row>6</th><td>MAX101</td><td>L Hippocampus body</td><td>-0.018110</td><td>0.04746578</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>1</th><td>MAX101</td><td>L ACC             </td><td>0.8458</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>2</th><td>MAX101</td><td>L BLBM Amygdala   </td><td>2.7326</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>3</th><td>MAX101</td><td>L BST             </td><td>3.9403</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>4</th><td>MAX101</td><td>L CeMe Amygdala   </td><td>2.3312</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>5</th><td>MAX101</td><td>L Crus II         </td><td>0.6951</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
+	<tr><th scope=row>6</th><td>MAX101</td><td>L Hippocampus body</td><td>1.6059</td><td>-0.5</td><td>-1.164152</td><td>-1.011495</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -530,7 +532,7 @@ plotPDP &lt;- function(posteriors) {
                                    0.150000001, 0.85,
                                    0.850000001, 1.0),
                        breaks = c(0, 0.15, 0.85, 1)) +
-        scale_x_continuous(breaks = c(-0.15, 0, 0.15),
+        scale_x_continuous(breaks = c(-1, 0, 1),
                      #labels = c( &quot;0 &gt; &quot;, &quot;0&quot;, &quot;0 &lt;&quot;)) +  # change to whatever labels you&#39;re using
                      labels = c( &quot;Safe &gt; Threat&quot;, &quot;0&quot;, &quot;Threat &gt; Safe&quot;)) +  # change to whatever labels you&#39;re using
         scale_y_continuous(breaks = c(1:length(P.labels$ROIs)),
@@ -582,7 +584,7 @@ plotPDP &lt;- function(posteriors) {
 <div class="stderr docutils container">
 <pre class="stderr literal-block">No id variables; using all as measure variables
 
-Picking joint bandwidth of 0.00219
+Picking joint bandwidth of 0.0143
 
 </pre>
 </div>
@@ -604,19 +606,19 @@ Picking joint bandwidth of 0.00219
 <div class="stderr docutils container">
 <pre class="stderr literal-block">No id variables; using all as measure variables
 
-Picking joint bandwidth of 0.0013
+Picking joint bandwidth of 0.00792
 
 No id variables; using all as measure variables
 
-Picking joint bandwidth of 0.00219
+Picking joint bandwidth of 0.0143
 
 No id variables; using all as measure variables
 
-Picking joint bandwidth of 0.00136
+Picking joint bandwidth of 0.00725
 
 No id variables; using all as measure variables
 
-Picking joint bandwidth of 0.00136
+Picking joint bandwidth of 0.00769
 
 </pre>
 </div>

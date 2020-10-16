@@ -1,0 +1,1 @@
+BML performed on weighted MEAN of the estimated response.

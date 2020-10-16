@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Mood Anxiety</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Mood Anxiety</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Activation
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs/00-ROI-info.html">
+   1. ROI Information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs/01-preproc.html">
+   2. Estimated Responses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs_old/05a-posterior_bmaps.html">
+   3. Results: Brain Slices (Original)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs_old/05b-posteriors.html">
+   4. Results: Posteriors (Original)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-final-ROIs/06b-posteriors.html">
+   5. Results: Posteriors (Min. Shifted)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Functional Connectivity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-lBST-FC.html">
+   1. Functional Connectivity (FC)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MSS vs. MVM
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-MSS_vs_MVM/00-visualization.html">
+   1. MSS vs. MVM
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/05-functional-connectivity/03-posteriors.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/LCE-UMD/mood-anxiety"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/LCE-UMD/mood-anxiety/issues/new?title=Issue%20on%20page%20%2F05-functional-connectivity/03-posteriors.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/LCE-UMD/mood-anxiety/edit/master/05-functional-connectivity/03-posteriors.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(IRdisplay)
+
+display_html(
+&#39;&lt;script&gt;  
+code_show=true; 
+function code_toggle() {
+  if (code_show){
+    $(\&#39;div.input\&#39;).hide();
+  } else {
+    $(\&#39;div.input\&#39;).show();
+  }
+  code_show = !code_show
+}  
+$( document ).ready(code_toggle);
+&lt;/script&gt;
+  &lt;form action=&quot;javascript:code_toggle()&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Click here to toggle on/off the raw code.&quot;&gt;
+ &lt;/form&gt;&#39;
+)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><script>  
+code_show=true; 
+function code_toggle() {
+  if (code_show){
+    $('div.input').hide();
+  } else {
+    $('div.input').show();
+  }
+  code_show = !code_show
+}  
+$( document ).ready(code_toggle);
+</script>
+  <form action="javascript:code_toggle()">
+    <input type="submit" value="Click here to toggle on/off the raw code.">
+ </form></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">brms</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+
+<span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">ggridges</span><span class="p">)</span>
+<span class="n">options</span><span class="p">(</span><span class="n">warn</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">Loading required package: Rcpp
+
+Loading 'brms' package (version 2.14.0). Useful instructions
+can be found by typing help('brms'). A more detailed introduction
+to the package is available through vignette('brms_overview').
+
+
+Attaching package: ‘brms’
+
+
+The following object is masked from ‘package:stats’:
+
+    ar
+
+
+
+Attaching package: ‘dplyr’
+
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+
+Attaching package: ‘data.table’
+
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+── [1mAttaching packages[22m ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+
+[32m✔[39m [34mggplot2[39m 3.3.2     [32m✔[39m [34mpurrr  [39m 0.3.4
+[32m✔[39m [34mtibble [39m 3.0.4     [32m✔[39m [34mstringr[39m 1.4.0
+[32m✔[39m [34mtidyr  [39m 1.0.2     [32m✔[39m [34mforcats[39m 0.5.0
+[32m✔[39m [34mreadr  [39m 1.3.1     
+
+── [1mConflicts[22m ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mdata.table[39m::[32mbetween()[39m masks [34mdplyr[39m::between()
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m       masks [34mstats[39m::filter()
+[31m✖[39m [34mdata.table[39m::[32mfirst()[39m   masks [34mdplyr[39m::first()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m          masks [34mstats[39m::lag()
+[31m✖[39m [34mdata.table[39m::[32mlast()[39m    masks [34mdplyr[39m::last()
+[31m✖[39m [34mpurrr[39m::[32mtranspose()[39m    masks [34mdata.table[39m::transpose()
+
+</pre>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load BML output .Rdata file</span>
+<span class="n">load</span><span class="p">(</span><span class="s1">&#39;results/MAX_threat_v_safe_L_BST_FC.RData&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;.Rdata objects:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1] &quot;.Rdata objects:&quot;
+ [1] &quot;chains&quot;     &quot;dataset&quot;    &quot;fm&quot;         &quot;iterations&quot; &quot;log&quot;       
+ [6] &quot;mod&quot;        &quot;modelForm&quot;  &quot;nfigs&quot;      &quot;ns&quot;         &quot;priorRBA&quot;  
+[11] &quot;SCALE&quot;      &quot;stan_code&quot; 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>dataTable &lt;- dataset
+nR &lt;- nlevels(dataTable$ROI)
+nD &lt;- 4
+print(&#39;Following are the first few rows of thet dataset used in BML&#39;)
+head(dataTable)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1] &quot;Following are the first few rows of thet dataset used in BML&quot;
+</pre></div>
+</div>
+<div class="output text_html"><table>
+<caption>A data.frame: 6 × 5</caption>
+<thead>
+	<tr><th></th><th scope=col>Subj</th><th scope=col>ROI</th><th scope=col>cond</th><th scope=col>spearmanr</th><th scope=col>r_z</th></tr>
+	<tr><th></th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>MAX101</td><td>R med. OFC</td><td>0.5</td><td>-0.3853</td><td>-0.40626883</td></tr>
+	<tr><th scope=row>2</th><td>MAX101</td><td>L med. OFC</td><td>0.5</td><td>-0.0324</td><td>-0.03241134</td></tr>
+	<tr><th scope=row>3</th><td>MAX101</td><td>R lat. OFC</td><td>0.5</td><td>-0.3618</td><td>-0.37895546</td></tr>
+	<tr><th scope=row>4</th><td>MAX101</td><td>L lat. OFC</td><td>0.5</td><td>-0.3029</td><td>-0.31270948</td></tr>
+	<tr><th scope=row>5</th><td>MAX101</td><td>M vmPFC1  </td><td>0.5</td><td>-0.1000</td><td>-0.10033535</td></tr>
+	<tr><th scope=row>6</th><td>MAX101</td><td>M vmPFC2  </td><td>0.5</td><td> 0.5735</td><td> 0.65272267</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>EOIq &lt;- unlist(lapply(strsplit(mod,&#39;\\+&#39;)[[1]],trimws))
+if(!(&#39;Intercept&#39; %in% EOIq)) EOIq &lt;- c(&#39;Intercept&#39;, EOIq)
+EOIq &lt;- EOIq[!grepl(&#39;1&#39;, EOIq)]
+
+print(&#39;Fixed effect model terms:&#39;)
+print(EOIq)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[1] &quot;Fixed effect model terms:&quot;
+[1] &quot;Intercept&quot; &quot;cond&quot;     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">outDir</span> <span class="o">=</span> <span class="s1">&#39;results/MAX_threat_v_safe_L_BST_FC_&#39;</span>
+<span class="n">summary_file</span> <span class="o">=</span> <span class="n">paste0</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span><span class="s1">&#39;summary.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Extract posteriors for fixed (aa) and random effects (bb)
+aa &lt;- fixef(fm, summary = FALSE)/SCALE # Population-Level Estimates
+bb &lt;- lapply(ranef(fm, summary = FALSE), `/`, SCALE) # Extract Group-Level (or random-effect)
+
+# Sum the fixed and random effect (only ROI) posterior. Following function does this.
+# The function adds the &quot;the poaterior of the global intercept (or slope) with the 
+# intercept (or slope) posterior of each roi. bb[[&#39;ROI&#39;]][,,tm] is a matrix with 
+# columns containing posteriors for every ROI
+# aa[,tm] is a single column posterior for the global intercept/slope.
+# intercept or slope is defined by tm, where tm is the index of the model term.
+psROI &lt;- function(aa, bb, tm) {
+  ps &lt;- apply(bb[[&#39;ROI&#39;]][,,tm], 2, &#39;+&#39;, aa[,tm])
+  return(ps)
+}
+
+#################################### Following functions are used for summarizing BML and GLM outputs in a table from ############################
+# function to compute P+
+cnt &lt;- function(x, ns) return(sum(x&gt;0)/ns)
+
+# function that creates a BML summary table for ROI posteriors (mean, std, and quartiles),
+# nd - number of digits to output
+sumROI &lt;- function(R0, ns, nd) {
+  hubs &lt;- data.frame(cbind(apply(R0, 2, mean), apply(R0, 2, sd), apply(R0, 2, cnt, ns), t(apply(R0, 2, quantile, 
+      probs=c(0.025, 0.05, 0.5, 0.95, 0.975)))))
+  names(hubs) &lt;- c(&#39;mean&#39;, &#39;SD&#39;, &#39;P+&#39;, &#39;2.5%&#39;, &#39;5%&#39;, &#39;50%&#39;, &#39;95%&#39;, &#39;97.5%&#39;)
+  return(round(hubs,nd))
+}
+
+# function that run conventional glm on each ROI individually
+sumGLM &lt;- function(ll, tm, nR, DF, nd) {
+   th &lt;- qt(c(0.025, 0.05, 0.5, 0.95, 0.975), DF)
+   rr &lt;- matrix(0, nrow = nR, ncol = 8, dimnames=list(levels(dataTable$ROI), c(&#39;mean&#39;, &#39;SD&#39;, &#39;2-sided-p&#39;, &#39;2.5%&#39;, &#39;5%&#39;, &#39;50%&#39;, &#39;95%&#39;, &#39;97.5%&#39;)))
+   rownames(rr) &lt;- levels(dataTable$ROI)
+   if(tm == &#39;Intercept&#39;) tm &lt;- &#39;(Intercept)&#39;
+   for(ii in 1:nR) {
+     u1 &lt;- ll[[ii]]$coefficients[tm,1] # mean
+     u2 &lt;- ll[[ii]]$coefficients[tm,2] # sd
+     u3 &lt;- ll[[ii]]$coefficients[tm,4] # 2-sided p
+     rr[ii,] &lt;- round(c(u1, u2, u3, u1+u2*th),nd)
+   } 
+   return(rr)
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Following print BML and GLM result summary for each ROI
+for (ii in 1:length(EOIq)){
+    #cat(&#39;\n&#39;,paste0(outDir,&#39;summary.txt&#39;), sep = &#39;\n&#39;, append=TRUE)
+    cat(sprintf(&#39;========= Summary of region effects for %s (RBA results) =========&#39;, EOIq[ii]), 
+        file = summary_file, sep = &#39;\n&#39;, append=TRUE)
+    ps0 &lt;- psROI(aa, bb, EOIq[ii])
+    gg_brm &lt;- sumROI(ps0, ns, nfigs)
+    write.table(gg_brm,file = paste0(outDir,EOIq[ii],&#39;_brms.txt&#39;),sep = &#39;,&#39;)
+    #gg_brm$ROI &lt;- factor(rownames(gg_brm))
+    cat(capture.output(gg_brm), file = summary_file, sep = &#39;\n&#39;, append=TRUE)
+
+    cat(sprintf(&#39;===================================================================================================================&#39;), 
+        file = summary_file, sep=&#39;\n&#39;, append=TRUE)
+    cat(sprintf(&#39;========= Summary of region effects under GLM for %s (for reference only): no adjustment for multiplicity =========&#39;, EOIq[ii]),
+        file = summary_file,sep = &#39;\n&#39;, append=TRUE)
+    mm &lt;- list()
+    GLM &lt;- as.formula(paste(&#39;r_z ~ &#39;,mod))
+    if(SCALE!=1) dataTable$Y &lt;- (dataTable$Y)/SCALE  # scale back for GLM
+    for(kk in levels(dataTable$ROI)) mm[[kk]] = lm(GLM, data=dataTable[dataTable$ROI==kk,])
+    nn &lt;- lapply(mm, summary)
+    ll &lt;- lapply(nn, `[`, &#39;coefficients&#39;)
+    gg_glm &lt;- sumGLM(ll, EOIq[ii], nR, nn[[ii]]$df, nfigs)
+    gg_glm = as.data.frame(gg_glm)
+    write.table(gg_glm,file = paste0(outDir,EOIq[ii],&#39;_glm.txt&#39;),sep = &#39;,&#39;)
+    cat(capture.output(gg_glm), file = summary_file, sep = &#39;\n&#39;, append=TRUE)
+    cat(&#39;\n&#39;,file = summary_file, sep = &#39;\n&#39;, append=TRUE)
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Function to create ridge plots 
+plotPDP &lt;- function(posteriors) {
+    
+    #if (title == &#39;cond&#39;){
+    #    title &lt;- &quot;Threat vs. Safe (2.5 - 8.75 seconds)&quot;
+    #} else {
+    #    title &lt;- paste(title,&quot;(2.5 - 8.75 seconds)&quot;)
+    #}
+    Title &lt;- &quot;Threat vs. Safe (2.5 - 8.75 seconds)&quot;
+    rm(list=ls())
+    ## import BML posterior table
+    posteriors &lt;- as_tibble(posteriors)
+    df.long &lt;- posteriors %&gt;% reshape2::melt()
+
+    calc.p &lt;- function(x) {
+      calc = sum(x &gt; 0)/length(x)
+    }
+
+    P. &lt;- as.data.frame(apply(posteriors,2,calc.p))  
+
+    #add row names and ID
+    setDT(P., keep.rownames = TRUE)[]  
+
+    colnames(P.) &lt;- c(&quot;ROIs&quot;, &quot;P.&quot;)
+
+
+    nobj &lt;- dim(posteriors)[1]
+    df.long$P. &lt;- rep(P.$P., each = nobj)
+
+    # add an index for plotting
+    df.long$index &lt;- rep(1:length(P.$ROIs), each = nobj)
+
+
+    df.long$P.grayed &lt;- df.long$P.
+
+    df.long$P.grayed &lt;- replace(df.long$P.grayed, df.long$P.grayed &gt; 0.15 &amp; df.long$P.grayed &lt; 0.85, NA)
+
+    # sort P+ and ROIs by P+ for plotting
+    P.labels &lt;- P. %&gt;% arrange(P.)
+
+    ggplot(df.long, aes(x = value, y = as.numeric(reorder(index, P.)), group = variable, fill = P.grayed)) +
+        stat_density_ridges(quantile_lines = TRUE,
+                      quantiles = 2,
+                      alpha = .95,
+                      scale = 2.55,
+                      color = &quot;lightgray&quot;,
+                      size = .55) + 
+        coord_cartesian(xlim = c(min(df.long$value), max(df.long$value))) +
+        geom_vline(xintercept = 0, linetype=&quot;solid&quot;,color = &quot;black&quot;,alpha = .95, size = .25) +
+        scale_fill_gradientn( colors = c(&quot;blue&quot;,&quot;cyan&quot;,
+                                  &quot;gray&quot;,&quot;yellow&quot;,&quot;red&quot;),
+                        values = c(0,0.15,
+                                   0.150000001, 0.85,
+                                   0.850000001, 1.0),
+                       breaks = c(0, 0.15, 0.85, 1)) +
+        scale_x_continuous(breaks = c(-0.1, 0, 0.1),
+                     #labels = c( &quot;0 &gt; &quot;, &quot;0&quot;, &quot;0 &lt;&quot;)) +  # change to whatever labels you&#39;re using
+                     labels = c( &quot;Safe &gt; Threat&quot;, &quot;0&quot;, &quot;Threat &gt; Safe&quot;)) +  # change to whatever labels you&#39;re using
+        scale_y_continuous(breaks = c(1:length(P.labels$ROIs)),
+                      expand = c(0,0.1),
+                      labels = P.labels$ROIs, 
+                     sec.axis = sec_axis(~.,
+                                          breaks = 1:length(P.labels$ROIs),
+                                          labels = format(round(P.labels$P.,3),nsmall = 2))) +
+        guides(fill = guide_colorbar(barwidth = 1,
+                                  barheight = 5,
+                                  nbin = 50,
+                                  frame.colour = &quot;black&quot;,
+                                  frame.linewidth = 0.5,
+                                  ticks.colour = &quot;black&quot;)) +
+        theme_ridges(center_axis_labels = TRUE, grid = FALSE) +
+        theme(
+        panel.background = element_blank(),
+        panel.grid.major.y = element_line(color = &quot;grey&quot;),
+        plot.title = element_text(size = 8, margin = unit(c(0.3,0,0,0.2),&quot;cm&quot;), face = &quot;plain&quot;),
+        legend.title = element_text(size = 5),
+        legend.text = element_text(size = 3),
+        #legend.position = &quot;none&quot;,
+        axis.text.y = element_text(size= 5, color = &quot;black&quot;, margin = unit(c(0,-0.05,0,0.05),&quot;cm&quot;)),
+       # axis.line.x = element_line(color = &quot;gray&quot;),
+        axis.text.y.right = element_text(size = 4, color = &quot;black&quot;,margin = unit(c(0,0,0,-0.05),&quot;cm&quot;)),
+        axis.text.x = element_text(size = 8, color = &quot;black&quot;, margin = unit(c(0.02,0,0,0),&quot;cm&quot;)),
+        plot.margin = unit(c(0,0.05,0,0.07), &quot;cm&quot;),
+        axis.ticks.x = element_blank(),
+        axis.ticks.y = element_blank()) +
+        labs(x = NULL,
+             y = NULL,
+             #title = &quot;Threat vs. Safe (2.5 - 8.75 seconds)&quot;,
+             fill = &quot;P+&quot;)
+#ggsave(&quot;posteriors.jpg&quot;, width=4.5, height=3, units = &quot;in&quot;, dpi = 900)
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Displaying posteriors only for Threat &gt; Safe contrast (cond)</span>
+<span class="n">posteriors</span> <span class="o">&lt;-</span> <span class="n">psROI</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="s1">&#39;cond&#39;</span><span class="p">)</span>
+<span class="n">plotPDP</span><span class="p">(</span><span class="n">posteriors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">No id variables; using all as measure variables
+
+Picking joint bandwidth of 0.00338
+
+</pre>
+</div>
+<img alt="../_images/03-posteriors_9_1.png" src="../_images/03-posteriors_9_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># generates ridge plots for effects (Intercept, cond, TRAIT and STATE), and saves them.</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">ii</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">length</span><span class="p">(</span><span class="n">EOIq</span><span class="p">)){</span>
+    <span class="n">posteriors</span> <span class="o">&lt;-</span> <span class="n">psROI</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">EOIq</span><span class="p">[</span><span class="n">ii</span><span class="p">])</span>
+    <span class="n">plotPDP</span><span class="p">(</span><span class="n">posteriors</span><span class="p">)</span>
+    <span class="n">ggsave</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span><span class="n">EOIq</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span><span class="s1">&#39;.png&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">4.5</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">900</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">No id variables; using all as measure variables
+
+Picking joint bandwidth of 0.00371
+
+No id variables; using all as measure variables
+
+Picking joint bandwidth of 0.00338
+
+</pre>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./05-functional-connectivity"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chirag Limbachia<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

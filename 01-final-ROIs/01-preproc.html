@@ -40,7 +40,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Results: Brain Slices (Original)" href="05a-posterior_bmaps.html" />
+    <link rel="next" title="3. Results: Brain Slices (Original)" href="../01-final-ROIs_old/05a-posterior_bmaps.html" />
     <link rel="prev" title="1. ROI Information" href="00-ROI-info.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,7 +76,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <p class="caption">
  <span class="caption-text">
-  Final ROIs
+  Activation
  </span>
 </p>
 <ul class="current nav sidenav_l1">
@@ -91,23 +91,30 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05a-posterior_bmaps.html">
+  <a class="reference internal" href="../01-final-ROIs_old/05a-posterior_bmaps.html">
    3. Results: Brain Slices (Original)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05b-posteriors.html">
+  <a class="reference internal" href="../01-final-ROIs_old/05b-posteriors.html">
    4. Results: Posteriors (Original)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06a-posterior_bmaps.html">
-   5. Results: Brain Slices (Min. Shifted)
+  <a class="reference internal" href="06b-posteriors.html">
+   5. Results: Posteriors (Min. Shifted)
   </a>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Functional Connectivity
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="06b-posteriors.html">
-   6. Results: Posteriors (Min. Shifted)
+  <a class="reference internal" href="../05-functional-connectivity/04-lBST-FC.html">
+   1. Functional Connectivity (FC)
   </a>
  </li>
 </ul>
@@ -216,45 +223,102 @@
                 
   <div class="section" id="estimated-responses">
 <h1><span class="section-number">2. </span>Estimated Responses<a class="headerlink" href="#estimated-responses" title="Permalink to this headline">¶</a></h1>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/01-preproc_13_0.png" src="../_images/01-preproc_13_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">roi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">rois</span><span class="p">):</span>
-    <span class="n">ii</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="mi">2</span>
-    
-    <span class="n">orig_threat_df</span> <span class="o">=</span> <span class="n">orig_mean_df</span><span class="p">[(</span><span class="n">orig_mean_df</span><span class="p">[</span><span class="s1">&#39;ROI&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">roi</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">orig_mean_df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;threat&#39;</span><span class="p">)]</span>
-    <span class="n">orig_safe_df</span> <span class="o">=</span> <span class="n">orig_mean_df</span><span class="p">[(</span><span class="n">orig_mean_df</span><span class="p">[</span><span class="s1">&#39;ROI&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">roi</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">orig_mean_df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;safe&#39;</span><span class="p">)]</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">orig_threat_df</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;threat&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">orig_threat_df</span><span class="p">[</span><span class="s1">&#39;lower_bound&#39;</span><span class="p">],</span><span class="n">orig_threat_df</span><span class="p">[</span><span class="s1">&#39;upper_bound&#39;</span><span class="p">],</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">orig_safe_df</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;safe&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">xmin</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span><span class="n">xmax</span><span class="o">=</span><span class="mf">8.75</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">xmin</span><span class="o">=</span><span class="mf">8.75</span><span class="p">,</span><span class="n">xmax</span><span class="o">=</span><span class="mf">16.25</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Orig:&#39;</span><span class="o">+</span><span class="n">roi</span><span class="p">)</span>
-    
-    
-    <span class="n">offset_threat_df</span> <span class="o">=</span> <span class="n">offset_mean_df</span><span class="p">[(</span><span class="n">offset_mean_df</span><span class="p">[</span><span class="s1">&#39;ROI&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">roi</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">offset_mean_df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;threat&#39;</span><span class="p">)]</span>
-    <span class="n">offset_safe_df</span> <span class="o">=</span> <span class="n">offset_mean_df</span><span class="p">[(</span><span class="n">offset_mean_df</span><span class="p">[</span><span class="s1">&#39;ROI&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">roi</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">offset_mean_df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;safe&#39;</span><span class="p">)]</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">offset_threat_df</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;threat&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">offset_threat_df</span><span class="p">[</span><span class="s1">&#39;lower_bound&#39;</span><span class="p">],</span><span class="n">offset_threat_df</span><span class="p">[</span><span class="s1">&#39;upper_bound&#39;</span><span class="p">],</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">offset_safe_df</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;safe&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">xmin</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span><span class="n">xmax</span><span class="o">=</span><span class="mf">8.75</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">xmin</span><span class="o">=</span><span class="mf">8.75</span><span class="p">,</span><span class="n">xmax</span><span class="o">=</span><span class="mf">16.25</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Min. Shifted: &#39;</span><span class="o">+</span><span class="n">roi</span><span class="p">)</span>
-    
-<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">agg_df</span> <span class="o">=</span> <span class="n">offset_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Subj&#39;</span><span class="p">,</span><span class="s1">&#39;Type&#39;</span><span class="p">,</span><span class="s1">&#39;ROI&#39;</span><span class="p">,</span><span class="s1">&#39;Phase&#39;</span><span class="p">])[</span><span class="s1">&#39;beta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">agg_df</span> <span class="o">=</span> <span class="n">agg_df</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;beta&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">agg_df</span> <span class="o">=</span> <span class="n">agg_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">STAI</span><span class="p">)</span>
+<span class="n">agg_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f6ebf4e5518&gt;
-</pre></div>
-</div>
-<img alt="../_images/01-preproc_13_1.png" src="../_images/01-preproc_13_1.png" />
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Subj</th>
+      <th>Type</th>
+      <th>ROI</th>
+      <th>Phase</th>
+      <th>beta</th>
+      <th>TRAIT</th>
+      <th>STATE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>MAX101</td>
+      <td>safe</td>
+      <td>L ACC</td>
+      <td>early</td>
+      <td>0.8458</td>
+      <td>-1.164152</td>
+      <td>-1.011495</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MAX101</td>
+      <td>safe</td>
+      <td>L ACC</td>
+      <td>late</td>
+      <td>0.8329</td>
+      <td>-1.164152</td>
+      <td>-1.011495</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MAX101</td>
+      <td>safe</td>
+      <td>L BLBM Amygdala</td>
+      <td>early</td>
+      <td>2.7326</td>
+      <td>-1.164152</td>
+      <td>-1.011495</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MAX101</td>
+      <td>safe</td>
+      <td>L BLBM Amygdala</td>
+      <td>late</td>
+      <td>3.6694</td>
+      <td>-1.164152</td>
+      <td>-1.011495</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>MAX101</td>
+      <td>safe</td>
+      <td>L BST</td>
+      <td>early</td>
+      <td>3.9403</td>
+      <td>-1.164152</td>
+      <td>-1.011495</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 
@@ -287,7 +351,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="00-ROI-info.html" title="previous page"><span class="section-number">1. </span>ROI Information</a>
-    <a class='right-next' id="next-link" href="05a-posterior_bmaps.html" title="next page"><span class="section-number">3. </span>Results: Brain Slices (Original)</a>
+    <a class='right-next' id="next-link" href="../01-final-ROIs_old/05a-posterior_bmaps.html" title="next page"><span class="section-number">3. </span>Results: Brain Slices (Original)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

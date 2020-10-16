@@ -13,6 +13,7 @@ execute:
     - "correlation_and_VIFs*"
     - "ROI_masks/MAX_ROIs_final_gm"
     - "03-MSS/*"
+    - "04-voxelwise-BML/*"
     - "05-functional-connectivity/01-*"
     - "05-functional-connectivity/03-*"
 

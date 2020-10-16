@@ -23,10 +23,8 @@ functions {
 data {
   int<lower=1> N;  // number of observations
   vector[N] Y;  // response variable
-  vector<lower=0>[N] se;  // known sampling error
   int<lower=1> K;  // number of population-level effects
   matrix[N, K] X;  // population-level design matrix
-  real<lower=0> sigma;  // residual SD
   // data for group-level effects of ID 1
   int<lower=1> N_1;  // number of grouping levels
   int<lower=1> M_1;  // number of coefficients per level
@@ -48,7 +46,6 @@ data {
   int prior_only;  // should the likelihood be ignored?
 }
 transformed data {
-  vector<lower=0>[N] se2 = square(se);
   int Kc = K - 1;
   matrix[N, Kc] Xc;  // centered version of X without an intercept
   vector[Kc] means_X;  // column means of X before centering
@@ -60,6 +57,7 @@ transformed data {
 parameters {
   vector[Kc] b;  // population-level effects
   real Intercept;  // temporary intercept for centered predictors
+  real<lower=0> sigma;  // residual SD
   real<lower=1> nu;  // degrees of freedom or shape
   // parameters for student-t distributed group-level effects
   real<lower=1> df_1;
@@ -108,24 +106,26 @@ model {
   }
   // priors including all constants
   target += student_t_lpdf(b | 3,0,10);
-  target += student_t_lpdf(Intercept | 3, 0, 10);
+  target += student_t_lpdf(Intercept | 3,0,10);
+  target += student_t_lpdf(sigma | 3,0,10)
+    - 1 * student_t_lccdf(0 | 3,0,10);
   target += gamma_lpdf(nu | 3.325,0.1)
     - 1 * gamma_lccdf(1 | 3.325,0.1);
   target += gamma_lpdf(df_1 | 3.325,0.1);
   target += inv_chi_square_lpdf(udf_1 | df_1);
   target += gamma_lpdf(df_2 | 3.325,0.1);
   target += inv_chi_square_lpdf(udf_2 | df_2);
-  target += student_t_lpdf(sd_1 | 3, 0, 10)
-    - 4 * student_t_lccdf(0 | 3, 0, 10);
+  target += student_t_lpdf(sd_1 | 3,0,10)
+    - 4 * student_t_lccdf(0 | 3,0,10);
   target += normal_lpdf(to_vector(z_1) | 0, 1);
   target += lkj_corr_cholesky_lpdf(L_1 | 2);
-  target += student_t_lpdf(sd_2 | 3, 0, 10)
-    - 2 * student_t_lccdf(0 | 3, 0, 10);
+  target += student_t_lpdf(sd_2 | 3,0,10)
+    - 2 * student_t_lccdf(0 | 3,0,10);
   target += normal_lpdf(to_vector(z_2) | 0, 1);
   target += lkj_corr_cholesky_lpdf(L_2 | 2);
   // likelihood including all constants
   if (!prior_only) {
-    target += student_t_lpdf(Y | nu, mu, se);
+    target += student_t_lpdf(Y | nu, mu, sigma);
   }
 }
 generated quantities {

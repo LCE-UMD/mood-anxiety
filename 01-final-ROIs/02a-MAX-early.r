@@ -2,11 +2,9 @@ library(brms)
 library(dplyr)
 library(parallel)
 
-df <- read.table('data/MAX_neutral_early_late_offset.txt',header = TRUE,sep = ",")
+df <- read.table('data/MAX_neutral_early_late_offset_agg.txt',header = TRUE,sep = ",")
 # Filter out 'late' data
 df <-filter(df,Phase=='early')
-# Create a new column se (standard error) by taking square root of var
-df$se = sqrt(df$var)
 
 # Number of iterations for the MCMC sampling
 iterations <- 20000
@@ -17,7 +15,7 @@ ns <- iterations*chains/2
 
 # For analysis only following columns are needed: Subj, ROI, beta, se, TRAIT and STATE. 
 # So just select those columns and creata a new dataframe called dataTable
-dataTable <- select(df,Subj,ROI,beta,se,cond,TRAIT,STATE)
+dataTable <- select(df,Subj,ROI,beta,cond,TRAIT,STATE)
 
 # Redefine grouping variables (Subj and ROI) as factors 
 dataTable$Subj <- factor(dataTable$Subj)
@@ -42,7 +40,7 @@ options(mc.cores = parallel::detectCores())
 print(getOption("mc.cores"))
 
 mod = '1 + cond + STATE + TRAIT'
-modelForm = paste('beta | se(se) ~',
+modelForm = paste('beta ~',
                   mod,'+ (1 + cond | gr(Subj, dist= "student")) +   
                          (',mod,'| gr(ROI, dist="student"))')
 priorRBA <- get_prior(formula = modelForm,data=dataTable,family = 'student')
@@ -52,7 +50,10 @@ priorRBA <- get_prior(formula = modelForm,data=dataTable,family = 'student')
 priorRBA$prior[1] <- "student_t(3,0,10)"
 priorRBA$prior[5] <- "lkj(2)"
 priorRBA$prior[8:9] <- "gamma(3.325,0.1)"
+priorRBA$prior[10] <- "student_t(3,0,10)"
 priorRBA$prior[11] <- "gamma(3.325,0.1)"
+priorRBA$prior[12] <- "student_t(3,0,10)"
+priorRBA$prior[21] <- "student_t(3,0,10)"
 
 # Print the table with priors
 print(priorRBA)

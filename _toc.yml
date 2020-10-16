@@ -1,14 +1,15 @@
 - file: intro
   numbered: true
 
-- part: Final ROIs
+- part: Activation
   sections:
-  - file: 01-final-ROIs/00-ROI-viewer
+  - file: 01-final-ROIs/00-ROI-info
   - file: 01-final-ROIs/01-preproc
-  - file: 01-final-ROIs/05a-posterior_bmaps
-  - file: 01-final-ROIs/05b-posteriors
-  - file: 01-final-ROIs/06a-posterior_bmaps
+  - file: 01-final-ROIs_old/05a-posterior_bmaps
+  - file: 01-final-ROIs_old/06a-posterior_bmaps
   - file: 01-final-ROIs/06b-posteriors
+- part: Functional Connectivity
+  - file: 05-functional-connectivity/04-lBST-FC
 - part: MSS vs. MVM
   sections:
   - file: 02-MSS_vs_MVM/00-visualization

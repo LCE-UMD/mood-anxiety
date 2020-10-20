@@ -1,6 +1,5 @@
 .ipynb_checkpoints/
 00-initial-ROIs/*
-ROI_masks/*
 ROIs/.ipynb_checkpoints/
 05-LOO-mod1-vs-mod2.ipynb
 05-LOO-mod1-vs-mod2.r

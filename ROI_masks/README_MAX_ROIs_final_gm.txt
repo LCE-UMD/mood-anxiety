@@ -54,6 +54,6 @@ R	post. Thalamus	52	387	Tian_pTHA-rh.nii.gz
 L	post. Thalamus	53	387	Tian_pTHA-lh.nii.gz
 R	PAG	54	15	rPAG_Ezra.nii.gz
 L	PAG	55	24	lPAG_Ezra.nii.gz
-R	Lobule IX	56	355	Right_IX_SUIT_2mm_gm.nii.gz
-L	Lobule IX	57	323	Left_IX_SUIT_2mm_gm.nii.gz
-L	Crus II	58	626	Left_IX_SUIT_2mm_gm.nii.gz
+R	Lobule IX	56	224	SUIT_r-XI_YeoDMN_intersect_gm_2mm.nii.gz
+L	Lobule IX	57	196	SUIT_l-XI_YeoDMN_intersect_gm_2mm.nii.gz
+L	Crus II	58	607	SUIT_l-CrusII_YeoNetwork6_intersect_gm_2mm.nii.gz

@@ -1,0 +1,78 @@
+ROI                   Index   Voxels         Cum_Freq      File                                      Transformations for this set
+(no ROI)                0        896518        896518
+ACC                     1           411        896929      ACC.nii
+vmPFC                   2            67        896996      vmPFC.nii.gz
+r PAG                   3            15        897011      rPAG_Ezra.nii.gz
+l lPAG                  4            24        897035      lPAG_Ezra.nii.gz
+r BST                   5             8        897043      rBNST.nii.gz
+l BST                   6             9        897052      lBNST.nii.gz
+r Ventral Striatum      7           241        897293      r-VS_gm.nii.gz
+l Ventral Striatum      8           300        897593      l-VS_gm.nii.gz
+r post. Putamen         9           366        897959      r_posterior_putamen_gm_clipped3.nii.gz    Voxels clipped three times to avoid overlap with INS voxels
+l post. Putamen        10           251        898210      l_posterior_putament_gm_clipped.nii.gz    Voxels clipped to avoid overlap with INS voxels
+r ant.  Putamen        11           441        898651      r_anterior_putamen_gm_clipped2.nii.gz     Voxels clipped twice to avoid overlap with INS voxels
+l ant.  Putamen        12           392        899043      l_anterior_putamen_gm_clipped.nii.gz      Voxels clipped to avoid overlap with INS voxels
+r post. Caudate        13           124        899167      r_poster_caudate_mask_gm.nii.gz
+l post. Caudate        14           215        899382      l_poster_caudate_mask_gm.nii.gz
+r ant.  Caudate        15           489        899871      r_anterior_caudate_mask_gm.nii.gz
+l ant.  Caudate        16           364        900235      l_anterior_caudate_mask_gm.nii.gz
+r AntVentral Insula    17           176        900411      Hammers-gm-0.5-anterior-pole_INS-r_2mm.nii.gz
+r MidPost.   Insula    18           575        900986      Hammers-gm-0.5-2mm-MidPosterior-INS-r.nii.gz
+l AntVentral Insula    19           171        901157      Hammers-gm-0.5-anterior_pole_INS-1_2mm.nii.gz
+l MidPost.   Insula    20           534        901691      Hammers-gm-0.5-2mm-MidPosterior-INS-l.nii.gz
+r AntDorsal  Insula    21           235        901926      Hammers-gm-0.5-2mm-AntDorsal-INS-r.nii.gz
+l AntDorsal  Insula    22           236        902162      Hammers-gm-0.5-2mm-AntDorsal-INS-l.nii.gz
+r CeMe Amygdala        23            47        902209      Amygdala_CeME_R.nii.gz
+l CeMe Amygdala        24            35        902244      Amygdala_CeME_L.nii.gz
+r BLBM Amygdala        25           129        902373      Amygdala_BLBM_La_R.nii.gz
+l BLBM Amygdala        26           132        902505      Amygdala_BLBM_La_L.nii.gz
+PCC                    27            64        902569      PCC1.nii.gz
+PCC/precuneus          28            60        902629      PCC_masks.nii.gz
+l Posterior Thalamus   29           387        899471      Tian_pTHA-lh.nii.gz
+r Posterior Thalamus   30           387        899858      Tian_pTHA-rh.nii.gz
+l Anterior MCC         31           325        900183      cingulate_mid_anterior_DD_left_2mm_midlineExcluded.nii.gz
+r Anterior MCC         32           393        900576      cingulate_mid_anterior_DD_right_2mm_midlineExcluded.nii.gz
+l Anterior Thalamus    33           867        901443      Tian_aTHA-lh.nii.gz
+r Anterior Thalamus    34           867        902310      Tian_aTHA-rh.nii.gz
+l Hypothalamus         35           148        902458      Caltech_l-HTH-2mm_gm_clipped.nii.gz     Voxels clipped that overlapped with anterior thalamus voxels
+r Hypothalamus         36           169        902627      Caltech_r-HTH-2mm_gm_clipped.nii.gz     Voxels clipped that overlapped with anterior thalamus voxels
+
+
+scripts to create masks:
+
+
+3dCalc -a ACC.nii -b vmPFC.nii.gz -c rPAG_Ezra.nii.gz -d lPAG_Ezra.nii.gz -e rBNST.nii.gz -f lBNST.nii.gz \
+-g r-VS_gm.nii.gz -h l-VS_gm.nii.gz -i r_posterior_putamen_gm_clipped3.nii.gz -j l_posterior_putamen_gm_clipped.nii.gz \
+-k r_anterior_putamen_gm_clipped2.nii.gz -l l_anterior_putamen_gm_clipped.nii.gz -m r_poster_caudate_mask_gm.nii.gz \
+-n l_poster_caudate_mask_gm.nii.gz -o r_anterior_caudate_mask_gm.nii.gz -p l_anterior_caudate_mask_gm.nii.gz \
+-q Hammers-gm-0.5-anterior_pole_INS-r_2mm.nii.gz -r Hammers-gm-0.5-2mm-MidPosterior-INS-r.nii.gz \
+-s Hammers-gm-0.5-anterior_pole_INS-1_2mm.nii.gz -t Hammers-gm-0.5-2mm-MidPosterior-INS-l.nii.gz \
+-u Hammers-gm-0.5-2mm-AntDorsal-INS-r.nii.gz -v Hammers-gm-0.5-2mm-AntDorsal-INS-l.nii.gz \
+-w Amygdala_CeME_R.nii.gz -x Amygdala_CeME_L.nii.gz -y Amygdala_BLBM_La_R.nii.gz -z Amygdala_BLBM_La_L.nii.gz \
+-expr '1*step(a)+2*step(b)+3*step(c)+4*step(d)+5*step(e)+6*step(f)+7*step(g)+8*step(h)+9*step(i)+10*step(j)+11*step(k)+12*step(l)+13*step(m)+14*step(n)+15*step(o)+16*step(p)+17*step(q)+18*step(r)+19*step(s)+20*step(t)+21*step(u)+22*step(v)+23*step(w)+24*step(x)+25*step(y)+26*step(z)' \
+-prefix MAX_ROIs_Z.nii.gz -overwrite
+
+3dcalc -a PCC1.nii.gz -b PCC_masks.nii.gz \
+-expr '27*step(a)+28*step(b)' \
+-prefix MAX_ROIs_2.nii.gz -overwrite
+
+3dCalc -a MAX_ROIs_Z.nii.gz -b MAX_ROIs_2.nii.gz \
+-expr 'a+b' \
+-prefix MAX_ROIs_checked.nii.gz -overwrite
+3dhistog -int MAX_ROIs_checked.nii.gz -unq 1.1D
+
+
+3dCalc -a Tian_pTHA-lh.nii.gz -b Tian_pTHA-rh.nii.gz -c cingulate_mid_anterior_DD_left_2mm_midlineExcluded.nii.gz \
+-d cingulate_mid_anterior_DD_right_2mm_midlineExcluded.nii.gz -e Tian_aTHA-lh.nii.gz \
+-f Tian_aTHA-rh.nii.gz -g Caltech_l-HTH-2mm_gm_clipped.nii.gz -h Caltech_r-HTH-2mm_gm_clipped.nii.gz \
+-expr '29*step(a)+30*step(b)+31*step(c)+32*step(d)+33*step(e)+34*step(f)+35*step(g)+36*step(h)' \
+-prefix MAX_test4.nii.gz -overwrite
+3dhistog -int MAX_test4.nii.gz -unq 1.1D
+
+
+3dCalc -a MAX_test4.nii.gz -b MAX_ROIs_checked.nii.gz \
+-expr 'a+b' \
+-prefix MAX_ROIs_checked.nii.gz
+
+
+files can be found in 'MAX/lab_ROIs'

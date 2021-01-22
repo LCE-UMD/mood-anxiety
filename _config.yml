@@ -16,6 +16,7 @@ execute:
     - "04-voxelwise-BML/*"
     - "05-functional-connectivity/01-*"
     - "05-functional-connectivity/03-*"
+    - "FD_motion_check"
 
 
 latex:

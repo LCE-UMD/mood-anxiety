@@ -6,7 +6,9 @@
         |-- MAX_neutral_early_late_offset_agg.txt           <- Data table for BML analysis
     |-- 00-ROI-info.ipynb                                   <- Information, visualization of the 70 ROIs
     |-- 01-preproc.ipynb                                    <- Extraction, visualization of min. shifted 
-                                                                response estimates for the 70 ROIs
+                                                                response estimates for the 70 ROIs. 
+                                                                It creates the data table used in BML 
+                                                                analysis (check data/README.md)
     |-- 02a-MAX-early.r                                     <- BML analysis script for early phase
     |-- 02b-MAX-late.r                                      <- BML analysis script for late phase
     |-- 03a-MAX-early_results.ipynb                         <- Plots posteriors for early phase. Also 

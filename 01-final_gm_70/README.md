@@ -17,4 +17,4 @@
                                                                 Requires ROI mask
 ```
 
-The 70 ROI mask used: `/data/bswift-1/Pessoa_Lab/MAX/ROI_masks/MAX_ROIs_final_gm_70.nii.gz'`
+The 70 ROI mask: `/data/bswift-1/Pessoa_Lab/MAX/ROI_masks/MAX_ROIs_final_gm_70.nii.gz'`

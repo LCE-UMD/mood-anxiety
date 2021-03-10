@@ -6,14 +6,14 @@ In the MAX experiment participants were presented with two conditions: threat an
 __Raw fMRI data:__ `/data/bswift-1/Pessoa_Lab/MAX/dataset/raw/MAX???`  
 __Preprocessed fMRI data:__
 - All runs
- - smooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func2/ICA_AROMA/MAX???_EP_Main_TR_MNI_2mm_SI_denoised.nii.gz`
- - unsmooth: `/data/bswift-1/Pessoa_Lab/NAX/dataset/preproc/MAX???/func2/ICA_AROMA/MAX???_EP_Main_TR_MNI_2mm_I_denoised.nii.gz`
+    - smooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func2/ICA_AROMA/MAX???_EP_Main_TR_MNI_2mm_SI_denoised.nii.gz`
+    - unsmooth: `/data/bswift-1/Pessoa_Lab/NAX/dataset/preproc/MAX???/func2/ICA_AROMA/MAX???_EP_Main_TR_MNI_2mm_I_denoised.nii.gz`
 - Neutral runs
- - smooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_neutral/MAX???_EP_Main_TR_MNI_2mm_SI_denoised.nii.gz`
- - unsmooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_neutral/MAX???_EP_Main_TR_MNI_2mm_I_denoised.nii.gz`
+    - smooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_neutral/MAX???_EP_Main_TR_MNI_2mm_SI_denoised.nii.gz`
+    - unsmooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_neutral/MAX???_EP_Main_TR_MNI_2mm_I_denoised.nii.gz`
 - Positive runs
- - smooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_positive/MAX???_EP_Main_TR_MNI_2mm_SI_denoised.nii.gz`
- - unsmooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_positive/MAX???_EP_Main_TR_MNI_2mm_I_denoised.nii.gz`
+    - smooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_positive/MAX???_EP_Main_TR_MNI_2mm_SI_denoised.nii.gz`
+    - unsmooth: `/data/bswift-1/Pessoa_Lab/MAX/dataset/preproc/MAX???/func_positive/MAX???_EP_Main_TR_MNI_2mm_I_denoised.nii.gz`
  
 Note: smooth data for voxelwise analysis; unsmooth data for ROI analysis.
 
@@ -27,17 +27,17 @@ __To create positive runs dataset:__ `/data/bswift-1/Pessoa_Lab/MAX/scripts/posi
 
 __First level analysis:__ 
 - Voxelwise analysis
- - Neutral runs
-   - Assumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/voxelwise_analysis/MAX_fMRI_Analysis_neutral_MR.sh`
-   - Unassumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/voxelwise_analysis/MAX_fMRI_Analysis_neutral_deconv.sh`
- - All runs
-   - Assumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/voxelwise_analysis/MAX_fMRI_Analysis_all_MR.sh`
+    - All runs
+       - Assumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/voxelwise_analysis/MAX_fMRI_Analysis_all_MR.sh`
+    - Neutral runs
+       - Assumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/voxelwise_analysis/MAX_fMRI_Analysis_neutral_MR.sh`
+       - Unassumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/voxelwise_analysis/MAX_fMRI_Analysis_neutral_deconv.sh`
 - ROI analysis
- - Neutral runs
-   - Unassumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/ROI_analysis/MAX_fMRI_Analysis_neutral_deconv.sh`
-   - Individually modulated: `/data/bswift-1/Pessoa_Lab/MAX/scripts/ROI_analysis/MAX_fMRI_Analysis_neutral_deconLSS.sh`
- - Positive analysis
-   - Unassumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/ROI_analysis/MAX_fMRI_Analysis_positive_deconv.sh`
+    - Neutral runs
+       - Unassumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/ROI_analysis/MAX_fMRI_Analysis_neutral_deconv.sh`
+       - Individually modulated: `/data/bswift-1/Pessoa_Lab/MAX/scripts/ROI_analysis/MAX_fMRI_Analysis_neutral_deconLSS.sh`
+- Positive analysis
+    - Unassumed shape: `/data/bswift-1/Pessoa_Lab/MAX/scripts/ROI_analysis/MAX_fMRI_Analysis_positive_deconv.sh`
   
 __First level estimate extraction:__  
 Voxelwise response estimates for threat and safe blocks, produced by first level analysis, can be extracted using the following script: `/data/bswift-1/Pessoa_Lab/MAX/scripts/voxelwise_analysis/MAX_3dcalc_minShifting_ThreatvsSafe.sh`. This script also shifts the response such that minimum response is 0.

@@ -58,5 +58,5 @@ __Notebook to check correlation and VIFs:__ `/data/bswift-1/Pessoa_Lab/MAX/scrip
 ## BML Analysis
 Refer to the current repo: https://github.com/LCE-UMD/mood-anxiety
 
-[01-final_gm_70](https://github.com/LCE-UMD/mood-anxiety/tree/main/01-final_gm_70): BML analysis on response estimates from ROI analysis  
-[02-voxelwise-BML](https://github.com/LCE-UMD/mood-anxiety/tree/main/02-voxelwise-BML): BML analysis on response estimates from voxelwise analysis  
+[01-final_gm_85](https://github.com/LCE-UMD/mood-anxiety/tree/main/01-final_gm_85): BML analysis on response estimates from ROI analysis  
+[02-voxelwise-insula-amygdala](https://github.com/LCE-UMD/mood-anxiety/tree/main/02-voxelwise-insula-amygdala): BML analysis on response estimates from voxelwise analysis  
